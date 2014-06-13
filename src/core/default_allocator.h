@@ -1,9 +1,6 @@
 #pragma once
 
 
-#include "core/lux.h"
-
-
 namespace Lux
 {
 

@@ -3,11 +3,12 @@
 #include "core/log.h"
 #include "core/MT/lock_free_fixed_queue.h"
 #include "core/MT/task.h"
+#include "core/MT/thread.h"
 #include "core/MT/transaction.h"
 #include "core/queue.h"
 #include "core/array.h"
 
-#include <Windows.h>
+//#include <Windows.h>
 
 //#define ASSERT_HANDLE_FAIL
 
@@ -48,6 +49,7 @@ namespace Lux
 			{
 				while(!m_tests_todo->isAborted())
 				{
+					MT::sleep(100);
 					AsynTest* test = m_tests_todo->pop(true);
 					if(NULL == test)
 						break;
@@ -125,7 +127,7 @@ namespace Lux
 					}
 
 					// fatal error occured. We need to respawn task.
-					if(10 == m_task.getExitCode())
+					if(m_task.isFinished())
 					{
 						// test failed, remove it from the queue and spawn new thread
 						AsynTest* test = m_in_progress.front();

@@ -1,50 +1,36 @@
-#include "platform/event.h"
-#include <cassert>
-#include <pthread.h>
+#include "core/lux.h" 
+#include "core/MT/event.h"
 
 namespace  Lux
 {
 	namespace MT
 	{
-		class OSXEvent : public Event 
+		Event::Event(EventFlags flags)
 		{
-		public:
-			virtual void reset() LUX_OVERRIDE;
-
-			virtual void trigger() LUX_OVERRIDE;
-
-			virtual void wait() LUX_OVERRIDE;
-			virtual bool poll() LUX_OVERRIDE;
-
-			OSXEvent(const char* name, bool signaled, bool manual_reset);
-			~OSXEvent();
-
-		private:
-			pthread_mutex_t m_mutex;
-			pthread_cond_t m_cond;
-			unsigned int m_waiting_thrads;
-			bool m_manual_reset;
-			bool m_signaled;
-		};
-
-		Event* Event::create(const char* name, bool signaled /* = false */, bool manual_reset /* = true */)
-		{
-			return new OSXEvent(name, signaled, manual_reset);
+			m_mutex = PTHREAD_MUTEX_INITIALIZER;
+			m_cond = PTHREAD_COND_INITIALIZER;
+			
+			pthread_mutex_init(&m_mutex, NULL);
+			pthread_cond_init(&m_cond, NULL);
+			m_waiting_thrads = 0;
+			m_manual_reset = !!(flags & EventFlags::MANUAL_RESET);
+			m_signaled = !!(flags & EventFlags::SIGNALED);
 		}
-
-		void Event::destroy(Event* event)
+		
+		Event::~Event()
 		{
-			delete static_cast<OSXEvent*>(event);
+			pthread_mutex_destroy(&m_mutex);
+			pthread_cond_destroy(&m_cond);
 		}
-
-		void OSXEvent::reset()
+		
+		void Event::reset()
 		{
 			pthread_mutex_lock(&m_mutex);
 			m_signaled = false;
 			pthread_mutex_unlock(&m_mutex);
 		}
-
-		void OSXEvent::trigger()
+		
+		void Event::trigger()
 		{
 			pthread_mutex_lock(&m_mutex);
 			if(m_manual_reset)
@@ -65,8 +51,8 @@ namespace  Lux
 			}
 			pthread_mutex_unlock(&m_mutex);
 		}
-
-		void OSXEvent::wait()
+		
+		void Event::wait()
 		{
 			pthread_mutex_lock(&m_mutex);
 			if (m_signaled)
@@ -84,29 +70,23 @@ namespace  Lux
 			}
 			pthread_mutex_unlock(&m_mutex);
 		}
-
-		bool OSXEvent::poll()
+		
+		bool Event::poll()
 		{
-			assert(0 && "Not supported!");
-			return false;
-		}
-
-		OSXEvent::OSXEvent(const char* name, bool signaled, bool manual_reset)
-		{
-			m_mutex = PTHREAD_MUTEX_INITIALIZER;
-			m_cond = PTHREAD_COND_INITIALIZER;
+			bool ret = false;
+			pthread_mutex_lock(&m_mutex);
+			if (m_signaled)
+			{
+				if (false == m_manual_reset)
+				{
+					m_signaled = false;
+				}
+				
+				ret = true;
+			}
+			pthread_mutex_unlock(&m_mutex);
 			
-			pthread_mutex_init(&m_mutex, LUX_NULL);
-			pthread_cond_init(&m_cond, LUX_NULL);
-			m_waiting_thrads = 0;
-			m_manual_reset = manual_reset;
-			m_signaled = signaled;
-		}
-
-		OSXEvent::~OSXEvent()
-		{
-			pthread_mutex_destroy(&m_mutex);
-			pthread_cond_destroy(&m_cond);
+			return ret;
 		}
 	}; // ~namespace MT
 }; // ~namespace Lux

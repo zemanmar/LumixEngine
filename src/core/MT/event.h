@@ -1,5 +1,8 @@
 #pragma once
-#include "core/lux.h"
+
+#ifdef OSX
+#include <pthread.h>
+#endif //~OSX
 
 namespace  Lux
 {
@@ -18,9 +21,7 @@ namespace  Lux
 			operator Value() const { return (Value)value; }
 			int value;
 		};
-
-		typedef void* EventHandle;
-
+		
 		class LUX_CORE_API Event
 		{
 		public:
@@ -35,7 +36,17 @@ namespace  Lux
 			bool poll();
 
 		private:
-			EventHandle m_id;
+#ifdef PC
+			void* m_id;
+#endif //~PC
+			
+#ifdef OSX
+			pthread_mutex_t m_mutex;
+			pthread_cond_t m_cond;
+			unsigned int m_waiting_thrads;
+			bool m_manual_reset;
+			bool m_signaled;
+#endif //~OSX
 		};
 	}; // ~namespace MT
 }; // ~namespace Lux

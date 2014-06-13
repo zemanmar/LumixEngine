@@ -3,6 +3,8 @@
 #include "core/resource_manager.h"
 #include "core/resource_manager_base.h"
 
+#include <type_traits>
+
 namespace Lux
 {
 	ResourceManager::ResourceManager() 

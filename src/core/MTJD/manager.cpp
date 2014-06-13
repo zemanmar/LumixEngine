@@ -5,6 +5,8 @@
 #include "core/MTJD/scheduler.h"
 #include "core/MTJD/worker_thread.h"
 
+#include "core/MT/thread.h"
+
 namespace Lux
 {
 	namespace MTJD
@@ -193,7 +195,9 @@ namespace Lux
 #if defined(_WIN32) || defined(_WIN64)
 			idx = 0;
 			return MT::getProccessAffinityMask();
-#else 
+#elif defined(OSX)
+			return MT::getProccessAffinityMask();
+#else
 #error "Not Supported!"
 #endif
 		}

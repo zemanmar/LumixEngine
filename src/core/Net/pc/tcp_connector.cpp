@@ -50,4 +50,4 @@ namespace Lux
 	} // ~namespace Net
 } // ~namespace Lux
 
-#endif DISABLE_NETWORK
+#endif //DISABLE_NETWORK

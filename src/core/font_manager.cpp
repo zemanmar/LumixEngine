@@ -1,7 +1,7 @@
 #include "core/lux.h"
 #include "core/font_manager.h"
 
-#include "core/file_system.h"
+#include "core/fs/file_system.h"
 #include "core/resource.h"
 namespace Lux
 {
@@ -17,13 +17,8 @@ namespace Lux
 		~FontResource()
 		{ }
 
-		//virtual void doLoad(void) LUX_OVERRIDE
-		//{
-		//	m_impl->m_font_image = static_cast<OpenGLTexture*>(loadImage(path, file_system));
-		//	m_impl->m_font_image->onLoaded().bind<OpenGLRendererImpl, &OpenGLRendererImpl::fontImageLoaded>(m_impl);
-		//}
 
-		virtual void doUnload(void) LUX_OVERRIDE
+		virtual void doUnload(void) override
 		{
 		}
 

@@ -177,11 +177,11 @@ namespace Lux
 			}
 		}
 
-		void Task::exit(int32_t exitCode)
+		void Task::exit(int32_t exit_code)
 		{
 			m_implementation->m_exited = true;
 			m_implementation->m_is_running = false;
-			::ExitThread(exitCode);
+			::ExitThread(exit_code);
 		}
 
 		static const DWORD MS_VC_EXCEPTION = 0x406D1388;

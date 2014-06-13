@@ -58,6 +58,11 @@ namespace Lux
 				return read(&val, sizeof(val));
 			}
 
+			LUX_FORCE_INLINE bool read(size_t& val)
+			{
+				return read(&val, sizeof(val));
+			}
+			
 			LUX_FORCE_INLINE bool write(bool val)
 			{
 				return write(&val, sizeof(val));
@@ -103,6 +108,11 @@ namespace Lux
 				return write(&val, sizeof(val));
 			}
 
+			LUX_FORCE_INLINE bool write(size_t val)
+			{
+				return write(&val, sizeof(val));
+			}
+			
 			bool readString(char* string, uint32_t max_size);
 			bool writeString(const char* string);
 

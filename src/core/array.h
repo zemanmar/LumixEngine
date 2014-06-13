@@ -1,10 +1,9 @@
 #pragma once
 
-
+#include "core/default_allocator.h"
 #include <cstdlib>
 #include <new>
-#include "core/default_allocator.h"
-
+#include <string.h>
 
 
 namespace Lux
@@ -235,7 +234,7 @@ public:
 			m_data = (T*)m_allocator.allocate(rhs.m_capacity * sizeof(T));
 			m_capacity = rhs.m_capacity;
 			m_size = rhs.m_size;
-			::memmove(m_data, rhs.m_data, sizeof(T)* m_size);
+			memmove(m_data, rhs.m_data, sizeof(T)* m_size);
 		}
 	}
 

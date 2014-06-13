@@ -30,9 +30,10 @@ namespace Lux
 	LUX_FORCE_INLINE void* lux_new_aligned(size_t size, size_t alignment, const char* file, int32_t line)
 	{
 		if(!size)size = 1;
-		void* p = _aligned_malloc(size, alignment);
-		storePtr(p, size, file, line);
-		return p;
+//		void* p = _aligned_malloc(size, alignment);
+//		storePtr(p, size, file, line);
+//		return p;
+		return NULL;
 	}
 	
 	LUX_FORCE_INLINE void* lux_realloc(void* ptr, size_t size, const char* file, int32_t line)
@@ -78,8 +79,8 @@ namespace Lux
 	{
 		if(!ptr)return;
 
-		removePtr(ptr);
-		_aligned_free(ptr);
+//		removePtr(ptr);
+//		_aligned_free(ptr);
 	}
 
 	void* dll_lux_new(size_t size, const char* file, int32_t line)

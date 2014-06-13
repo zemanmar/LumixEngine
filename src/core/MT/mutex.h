@@ -1,12 +1,23 @@
 #pragma once
 #include "core/lux.h"
 
+#ifdef OSX
+#include <pthread.h>
+#endif //~OSX
+
 namespace Lux
 {
 	namespace MT
 	{
+		
+#ifdef PC
 		typedef void* MutexHandle;
-
+#endif
+		
+#ifdef OSX
+		typedef pthread_mutex_t MutexHandle;
+#endif //~OSX
+		
 		class LUX_CORE_API Mutex
 		{
 		public:

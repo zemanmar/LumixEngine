@@ -8,7 +8,7 @@ namespace Lux
 {
 	namespace MTJD
 	{
-		class LUX_CORE_API BaseEntry abstract
+		class LUX_CORE_API BaseEntry //abstract
 		{
 		public:
 			typedef Array<BaseEntry*> DependencyTable;

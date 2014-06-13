@@ -1,10 +1,6 @@
 #pragma once
 
-#include "core/lux.h"
-
 // base on molecular musings blogpost
-
-
 namespace Lux
 {
 

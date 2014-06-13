@@ -1,10 +1,8 @@
+#include "core/lux.h" 
 #include "core/default_allocator.h"
-
 
 namespace Lux
 {
-
-
 	void* DefaultAllocator::allocate(size_t n)
 	{
 		return LUX_MALLOC(n);

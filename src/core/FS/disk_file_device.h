@@ -1,6 +1,5 @@
 #pragma once
 
-#include "core/lux.h"
 #include "core/fs/ifile_device.h"
 
 namespace Lux

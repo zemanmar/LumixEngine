@@ -29,7 +29,7 @@ namespace Lux
 			IFile* m_file;
 			ReadCallback m_cb;
 			Mode m_mode;
-			char m_path[_MAX_PATH];
+			char m_path[LUX_MAX_PATH];
 			uint8_t m_flags;
 
 		};

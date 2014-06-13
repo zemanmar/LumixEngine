@@ -1,3 +1,4 @@
+#include "core/lux.h" 
 #include "unit_tests/suite/lux_unit_tests.h"
 
 #include "core/path.h"

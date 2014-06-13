@@ -17,7 +17,7 @@ namespace Lux
 			void bind(C* instance)
 			{
 				Delegate<R> cb;
-				cb.bind<C, Function>(instance);
+				cb.template bind<C, Function>(instance);
 				m_delegates.push(cb);
 			}
 
@@ -25,7 +25,7 @@ namespace Lux
 			void unbind(C* instance)
 			{
 				Delegate<R> cb;
-				cb.bind<C, Function>(instance);
+				cb.template bind<C, Function>(instance);
 				for(int i = 0; i < m_delegates.size(); ++i)
 				{
 					if(m_delegates[i] == cb)
@@ -56,7 +56,7 @@ namespace Lux
 			void bind(C* instance)
 			{
 				Delegate<R (A0)> cb;
-				cb.bind<C, Function>(instance);
+				cb.template bind<C, Function>(instance);
 				m_delegates.push(cb);
 			}
 
@@ -64,7 +64,7 @@ namespace Lux
 			void unbind(C* instance)
 			{
 				Delegate<R (A0)> cb;
-				cb.bind<C, Function>(instance);
+				cb.template bind<C, Function>(instance);
 				for(int i = 0; i < m_delegates.size(); ++i)
 				{
 					if(m_delegates[i] == cb)
@@ -95,7 +95,7 @@ namespace Lux
 			void bind()
 			{
 				Delegate<R (A0, A1)> cb;
-				cb.bind<Function>();
+				cb.template bind<Function>();
 				m_delegates.push(cb);
 			}
 
@@ -103,7 +103,7 @@ namespace Lux
 			void bind(C* instance)
 			{
 				Delegate<R (A0, A1)> cb;
-				cb.bind<C, Function>(instance);
+				cb.template bind<C, Function>(instance);
 				m_delegates.push(cb);
 			}
 
@@ -111,7 +111,7 @@ namespace Lux
 			void unbind(C* instance)
 			{
 				Delegate<R (A0, A1)> cb;
-				cb.bind<C, Function>(instance);
+				cb.template bind<C, Function>(instance);
 				for(int i = 0; i < m_delegates.size(); ++i)
 				{
 					if(m_delegates[i] == cb)

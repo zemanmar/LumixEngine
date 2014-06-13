@@ -4,10 +4,10 @@ namespace Lux
 {
 	struct LUX_CORE_API PathUtils
 	{
-		static void normalize(const char* path, char* out, uint32_t max_size)
+		static void normalize(const char* path, char* out, size_t max_size)
 		{
 			ASSERT(max_size > 0);
-			uint32_t i = 0;
+			size_t i = 0;
 			if (path[0] == '\\' || path[0] == '/')
 				++path;
 			while (*path != '\0' && i < max_size)

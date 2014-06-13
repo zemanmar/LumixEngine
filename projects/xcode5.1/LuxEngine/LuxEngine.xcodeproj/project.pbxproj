@@ -1,0 +1,1054 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF102D941942440C00F22450 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102D911942440C00F22450 /* main.cpp */; };
+		EF102DF0194244E300F22450 /* vec4.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102DAE194244E300F22450 /* vec4.h */; };
+		EF102DF1194244E300F22450 /* vec3.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102DAF194244E300F22450 /* vec3.h */; };
+		EF102DF2194244E300F22450 /* timer.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102DB0194244E300F22450 /* timer.h */; };
+		EF102DF4194244E300F22450 /* string.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102DB2194244E300F22450 /* string.h */; };
+		EF102DF5194244E300F22450 /* static_array.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102DB3194244E300F22450 /* static_array.h */; };
+		EF102DF6194244E300F22450 /* stack_allocator.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102DB4194244E300F22450 /* stack_allocator.h */; };
+		EF102DF7194244E300F22450 /* resource.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102DB5194244E300F22450 /* resource.h */; };
+		EF102DF8194244E300F22450 /* resource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102DB6194244E300F22450 /* resource.cpp */; };
+		EF102DF9194244E300F22450 /* resource_manager.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102DB7194244E300F22450 /* resource_manager.h */; };
+		EF102DFA194244E300F22450 /* resource_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102DB8194244E300F22450 /* resource_manager.cpp */; };
+		EF102DFB194244E300F22450 /* resource_manager_base.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102DB9194244E300F22450 /* resource_manager_base.h */; };
+		EF102DFC194244E300F22450 /* resource_manager_base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102DBA194244E300F22450 /* resource_manager_base.cpp */; };
+		EF102DFD194244E300F22450 /* queue.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102DBB194244E300F22450 /* queue.h */; };
+		EF102DFE194244E300F22450 /* quat.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102DBC194244E300F22450 /* quat.h */; };
+		EF102DFF194244E300F22450 /* quat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102DBD194244E300F22450 /* quat.cpp */; };
+		EF102E00194244E300F22450 /* profiler.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102DBE194244E300F22450 /* profiler.h */; };
+		EF102E01194244E300F22450 /* profiler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102DBF194244E300F22450 /* profiler.cpp */; };
+		EF102E02194244E300F22450 /* pod_hash_map.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102DC0194244E300F22450 /* pod_hash_map.h */; };
+		EF102E03194244E300F22450 /* pod_array.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102DC1194244E300F22450 /* pod_array.h */; };
+		EF102E04194244E300F22450 /* path.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102DC3194244E300F22450 /* path.h */; };
+		EF102E05194244E300F22450 /* path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102DC4194244E300F22450 /* path.cpp */; };
+		EF102E06194244E300F22450 /* path_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102DC5194244E300F22450 /* path_utils.h */; };
+		EF102E07194244E300F22450 /* os_file.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102DC7194244E300F22450 /* os_file.h */; };
+		EF102E09194244E300F22450 /* new.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102DC9194244E300F22450 /* new.h */; };
+		EF102E0A194244E300F22450 /* new.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102DCA194244E300F22450 /* new.cpp */; };
+		EF102E0B194244E300F22450 /* new_macros.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102DCB194244E300F22450 /* new_macros.h */; };
+		EF102E0C194244E300F22450 /* new_macros.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102DCC194244E300F22450 /* new_macros.cpp */; };
+		EF102E0D194244E300F22450 /* memory_tracker.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102DD0194244E300F22450 /* memory_tracker.h */; };
+		EF102E0E194244E300F22450 /* memory_tracker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102DD1194244E300F22450 /* memory_tracker.cpp */; };
+		EF102E0F194244E300F22450 /* matrix.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102DD2194244E300F22450 /* matrix.h */; };
+		EF102E10194244E300F22450 /* matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102DD3194244E300F22450 /* matrix.cpp */; };
+		EF102E11194244E300F22450 /* math_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102DD4194244E300F22450 /* math_utils.h */; };
+		EF102E12194244E300F22450 /* math_utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102DD5194244E300F22450 /* math_utils.cpp */; };
+		EF102E13194244E300F22450 /* map.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102DD6194244E300F22450 /* map.h */; };
+		EF102E14194244E300F22450 /* lux.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102DD7194244E300F22450 /* lux.h */; };
+		EF102E15194244E300F22450 /* log.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102DD8194244E300F22450 /* log.h */; };
+		EF102E16194244E300F22450 /* log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102DD9194244E300F22450 /* log.cpp */; };
+		EF102E17194244E300F22450 /* json_serializer.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102DDA194244E300F22450 /* json_serializer.h */; };
+		EF102E18194244E300F22450 /* json_serializer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102DDB194244E300F22450 /* json_serializer.cpp */; };
+		EF102E19194244E300F22450 /* iserializer.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102DDC194244E300F22450 /* iserializer.h */; };
+		EF102E1A194244E300F22450 /* input_system.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102DDD194244E300F22450 /* input_system.h */; };
+		EF102E1B194244E300F22450 /* hash_map.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102DDE194244E300F22450 /* hash_map.h */; };
+		EF102E1C194244E300F22450 /* free_list.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102DE0194244E300F22450 /* free_list.h */; };
+		EF102E1D194244E300F22450 /* font_manager.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102DE1194244E300F22450 /* font_manager.h */; };
+		EF102E1E194244E300F22450 /* font_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102DE2194244E300F22450 /* font_manager.cpp */; };
+		EF102E1F194244E300F22450 /* fifo_allocator.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102DE3194244E300F22450 /* fifo_allocator.h */; };
+		EF102E20194244E300F22450 /* fifo_allocator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102DE4194244E300F22450 /* fifo_allocator.cpp */; };
+		EF102E21194244E300F22450 /* event_manager.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102DE5194244E300F22450 /* event_manager.h */; };
+		EF102E22194244E300F22450 /* event_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102DE6194244E300F22450 /* event_manager.cpp */; };
+		EF102E23194244E300F22450 /* delegate.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102DE7194244E300F22450 /* delegate.h */; };
+		EF102E24194244E300F22450 /* delegate_list.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102DE8194244E300F22450 /* delegate_list.h */; };
+		EF102E25194244E300F22450 /* default_allocator.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102DE9194244E300F22450 /* default_allocator.h */; };
+		EF102E26194244E300F22450 /* default_allocator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102DEA194244E300F22450 /* default_allocator.cpp */; };
+		EF102E27194244E300F22450 /* crc32.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102DEB194244E300F22450 /* crc32.h */; };
+		EF102E28194244E300F22450 /* crc32.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102DEC194244E300F22450 /* crc32.cpp */; };
+		EF102E29194244E300F22450 /* blob.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102DED194244E300F22450 /* blob.h */; };
+		EF102E2A194244E300F22450 /* blob.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102DEE194244E300F22450 /* blob.cpp */; };
+		EF102E2B194244E300F22450 /* array.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102DEF194244E300F22450 /* array.h */; };
+		EF102E4B194269AA00F22450 /* atomic.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102E35194269AA00F22450 /* atomic.h */; };
+		EF102E4C194269AA00F22450 /* event.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102E36194269AA00F22450 /* event.h */; };
+		EF102E4D194269AA00F22450 /* lock_free_fixed_queue.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102E37194269AA00F22450 /* lock_free_fixed_queue.h */; };
+		EF102E4E194269AA00F22450 /* lock_free_queue.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102E38194269AA00F22450 /* lock_free_queue.h */; };
+		EF102E4F194269AA00F22450 /* mutex.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102E39194269AA00F22450 /* mutex.h */; };
+		EF102E50194269AA00F22450 /* event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102E3B194269AA00F22450 /* event.cpp */; };
+		EF102E51194269AA00F22450 /* mutex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102E3C194269AA00F22450 /* mutex.cpp */; };
+		EF102E52194269AA00F22450 /* semaphore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102E3D194269AA00F22450 /* semaphore.cpp */; };
+		EF102E53194269AA00F22450 /* spin_mutex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102E3E194269AA00F22450 /* spin_mutex.cpp */; };
+		EF102E54194269AA00F22450 /* task.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102E3F194269AA00F22450 /* task.cpp */; };
+		EF102E5B194269AA00F22450 /* semaphore.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102E47194269AA00F22450 /* semaphore.h */; };
+		EF102E5C194269AA00F22450 /* spin_mutex.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102E48194269AA00F22450 /* spin_mutex.h */; };
+		EF102E5D194269AA00F22450 /* task.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102E49194269AA00F22450 /* task.h */; };
+		EF102E5E194269AA00F22450 /* transaction.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102E4A194269AA00F22450 /* transaction.h */; };
+		EF102E621945BAC400F22450 /* thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102E601945BAC400F22450 /* thread.cpp */; };
+		EF102E7E194753B300F22450 /* tcp_acceptor.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102E69194753B300F22450 /* tcp_acceptor.h */; };
+		EF102E7F194753B300F22450 /* tcp_connector.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102E6A194753B300F22450 /* tcp_connector.h */; };
+		EF102E80194753B300F22450 /* tcp_stream.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102E6B194753B300F22450 /* tcp_stream.h */; };
+		EF102E81194753B300F22450 /* base_entry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102E6D194753B300F22450 /* base_entry.cpp */; };
+		EF102E82194753B300F22450 /* base_entry.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102E6E194753B300F22450 /* base_entry.h */; };
+		EF102E83194753B300F22450 /* enums.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102E6F194753B300F22450 /* enums.h */; };
+		EF102E84194753B300F22450 /* framework.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102E70194753B300F22450 /* framework.h */; };
+		EF102E85194753B300F22450 /* group.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102E71194753B300F22450 /* group.cpp */; };
+		EF102E86194753B300F22450 /* group.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102E72194753B300F22450 /* group.h */; };
+		EF102E87194753B300F22450 /* job.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102E73194753B300F22450 /* job.cpp */; };
+		EF102E88194753B300F22450 /* job.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102E74194753B300F22450 /* job.h */; };
+		EF102E89194753B300F22450 /* manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102E75194753B300F22450 /* manager.cpp */; };
+		EF102E8A194753B300F22450 /* manager.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102E76194753B300F22450 /* manager.h */; };
+		EF102E8B194753B300F22450 /* scheduler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102E77194753B300F22450 /* scheduler.cpp */; };
+		EF102E8C194753B300F22450 /* scheduler.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102E78194753B300F22450 /* scheduler.h */; };
+		EF102E8D194753B300F22450 /* worker_thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102E79194753B300F22450 /* worker_thread.cpp */; };
+		EF102E8E194753B300F22450 /* worker_thread.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102E7A194753B300F22450 /* worker_thread.h */; };
+		EF102E9F194753E100F22450 /* disk_file_device.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102E90194753E100F22450 /* disk_file_device.cpp */; };
+		EF102EA0194753E100F22450 /* disk_file_device.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102E91194753E100F22450 /* disk_file_device.h */; };
+		EF102EA1194753E100F22450 /* file_events_device.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102E92194753E100F22450 /* file_events_device.cpp */; };
+		EF102EA2194753E100F22450 /* file_events_device.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102E93194753E100F22450 /* file_events_device.h */; };
+		EF102EA3194753E100F22450 /* file_system.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102E94194753E100F22450 /* file_system.cpp */; };
+		EF102EA4194753E100F22450 /* file_system.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102E95194753E100F22450 /* file_system.h */; };
+		EF102EA5194753E100F22450 /* ifile.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102E96194753E100F22450 /* ifile.h */; };
+		EF102EA6194753E100F22450 /* ifile_device.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102E97194753E100F22450 /* ifile_device.h */; };
+		EF102EA7194753E100F22450 /* ifile_system_defines.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102E98194753E100F22450 /* ifile_system_defines.h */; };
+		EF102EA8194753E100F22450 /* memory_file_device.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102E99194753E100F22450 /* memory_file_device.cpp */; };
+		EF102EA9194753E100F22450 /* memory_file_device.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102E9A194753E100F22450 /* memory_file_device.h */; };
+		EF102EAA194753E100F22450 /* tcp_file_device.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102E9B194753E100F22450 /* tcp_file_device.cpp */; };
+		EF102EAB194753E100F22450 /* tcp_file_device.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102E9C194753E100F22450 /* tcp_file_device.h */; };
+		EF102EAC194753E100F22450 /* tcp_file_server.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102E9D194753E100F22450 /* tcp_file_server.cpp */; };
+		EF102EAD194753E100F22450 /* tcp_file_server.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102E9E194753E100F22450 /* tcp_file_server.h */; };
+		EF102F411947540300F22450 /* unit_test_app.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102EB21947540300F22450 /* unit_test_app.cpp */; };
+		EF102F421947540300F22450 /* unit_test_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102EB41947540300F22450 /* unit_test_manager.cpp */; };
+		EF102F441947540300F22450 /* ut_file_system.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102EB91947540300F22450 /* ut_file_system.cpp */; };
+		EF102F451947540300F22450 /* ut_hash_map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102EBA1947540300F22450 /* ut_hash_map.cpp */; };
+		EF102F461947540300F22450 /* ut_mtjd_framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102EBB1947540300F22450 /* ut_mtjd_framework.cpp */; };
+		EF102F471947540300F22450 /* ut_path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102EBC1947540300F22450 /* ut_path.cpp */; };
+		EF102F481947540300F22450 /* ut_quat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102EBD1947540300F22450 /* ut_quat.cpp */; };
+		EF102F491947540300F22450 /* ut_transaction_queue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102EBE1947540300F22450 /* ut_transaction_queue.cpp */; };
+		EF102F7F194754A700F22450 /* tcp_acceptor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102F7E194754A700F22450 /* tcp_acceptor.cpp */; };
+		EF102F81194754B600F22450 /* tcp_connector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102F80194754B600F22450 /* tcp_connector.cpp */; };
+		EF102F83194754CF00F22450 /* tcp_stream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102F82194754CF00F22450 /* tcp_stream.cpp */; };
+		EF102F8C1948E62800F22450 /* os_file.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102F871948E62800F22450 /* os_file.cpp */; };
+		EF102F911948E67900F22450 /* os_file.h in Headers */ = {isa = PBXBuildFile; fileRef = EF102F901948E67900F22450 /* os_file.h */; };
+		EF102F931948F25000F22450 /* atomic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102F921948F25000F22450 /* atomic.cpp */; };
+		EF102F9A1949EC3600F22450 /* input_system.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102F971949EC3600F22450 /* input_system.cpp */; };
+		EF102F9C1949EC3600F22450 /* timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102F991949EC3600F22450 /* timer.cpp */; };
+		EF102FA21949F43100F22450 /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EF102DA9194244B100F22450 /* libcore.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF102E3119424E1100F22450 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF102D7C194243C900F22450 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF102DA8194244B100F22450;
+			remoteInfo = core;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EF102D84194243DF00F22450 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EF102D86194243DF00F22450 /* unit_tests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = unit_tests; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF102D911942440C00F22450 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../../../../src/unit_tests/main.cpp; sourceTree = "<group>"; };
+		EF102DA9194244B100F22450 /* libcore.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libcore.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF102DAE194244E300F22450 /* vec4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vec4.h; path = ../../../src/core/vec4.h; sourceTree = "<group>"; };
+		EF102DAF194244E300F22450 /* vec3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vec3.h; path = ../../../src/core/vec3.h; sourceTree = "<group>"; };
+		EF102DB0194244E300F22450 /* timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = timer.h; path = ../../../src/core/timer.h; sourceTree = "<group>"; };
+		EF102DB2194244E300F22450 /* string.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = string.h; path = ../../../src/core/string.h; sourceTree = "<group>"; };
+		EF102DB3194244E300F22450 /* static_array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = static_array.h; path = ../../../src/core/static_array.h; sourceTree = "<group>"; };
+		EF102DB4194244E300F22450 /* stack_allocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stack_allocator.h; path = ../../../src/core/stack_allocator.h; sourceTree = "<group>"; };
+		EF102DB5194244E300F22450 /* resource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = resource.h; path = ../../../src/core/resource.h; sourceTree = "<group>"; };
+		EF102DB6194244E300F22450 /* resource.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = resource.cpp; path = ../../../src/core/resource.cpp; sourceTree = "<group>"; };
+		EF102DB7194244E300F22450 /* resource_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = resource_manager.h; path = ../../../src/core/resource_manager.h; sourceTree = "<group>"; };
+		EF102DB8194244E300F22450 /* resource_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = resource_manager.cpp; path = ../../../src/core/resource_manager.cpp; sourceTree = "<group>"; };
+		EF102DB9194244E300F22450 /* resource_manager_base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = resource_manager_base.h; path = ../../../src/core/resource_manager_base.h; sourceTree = "<group>"; };
+		EF102DBA194244E300F22450 /* resource_manager_base.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = resource_manager_base.cpp; path = ../../../src/core/resource_manager_base.cpp; sourceTree = "<group>"; };
+		EF102DBB194244E300F22450 /* queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = queue.h; path = ../../../src/core/queue.h; sourceTree = "<group>"; };
+		EF102DBC194244E300F22450 /* quat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = quat.h; path = ../../../src/core/quat.h; sourceTree = "<group>"; };
+		EF102DBD194244E300F22450 /* quat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = quat.cpp; path = ../../../src/core/quat.cpp; sourceTree = "<group>"; };
+		EF102DBE194244E300F22450 /* profiler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = profiler.h; path = ../../../src/core/profiler.h; sourceTree = "<group>"; };
+		EF102DBF194244E300F22450 /* profiler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = profiler.cpp; path = ../../../src/core/profiler.cpp; sourceTree = "<group>"; };
+		EF102DC0194244E300F22450 /* pod_hash_map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pod_hash_map.h; path = ../../../src/core/pod_hash_map.h; sourceTree = "<group>"; };
+		EF102DC1194244E300F22450 /* pod_array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pod_array.h; path = ../../../src/core/pod_array.h; sourceTree = "<group>"; };
+		EF102DC3194244E300F22450 /* path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = path.h; path = ../../../src/core/path.h; sourceTree = "<group>"; };
+		EF102DC4194244E300F22450 /* path.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = path.cpp; path = ../../../src/core/path.cpp; sourceTree = "<group>"; };
+		EF102DC5194244E300F22450 /* path_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = path_utils.h; path = ../../../src/core/path_utils.h; sourceTree = "<group>"; };
+		EF102DC7194244E300F22450 /* os_file.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = os_file.h; path = ../../../src/core/os_file.h; sourceTree = "<group>"; };
+		EF102DC9194244E300F22450 /* new.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = new.h; path = ../../../src/core/new.h; sourceTree = "<group>"; };
+		EF102DCA194244E300F22450 /* new.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = new.cpp; path = ../../../src/core/new.cpp; sourceTree = "<group>"; };
+		EF102DCB194244E300F22450 /* new_macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = new_macros.h; path = ../../../src/core/new_macros.h; sourceTree = "<group>"; };
+		EF102DCC194244E300F22450 /* new_macros.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = new_macros.cpp; path = ../../../src/core/new_macros.cpp; sourceTree = "<group>"; };
+		EF102DD0194244E300F22450 /* memory_tracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = memory_tracker.h; path = ../../../src/core/memory_tracker.h; sourceTree = "<group>"; };
+		EF102DD1194244E300F22450 /* memory_tracker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = memory_tracker.cpp; path = ../../../src/core/memory_tracker.cpp; sourceTree = "<group>"; };
+		EF102DD2194244E300F22450 /* matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = matrix.h; path = ../../../src/core/matrix.h; sourceTree = "<group>"; };
+		EF102DD3194244E300F22450 /* matrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = matrix.cpp; path = ../../../src/core/matrix.cpp; sourceTree = "<group>"; };
+		EF102DD4194244E300F22450 /* math_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = math_utils.h; path = ../../../src/core/math_utils.h; sourceTree = "<group>"; };
+		EF102DD5194244E300F22450 /* math_utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = math_utils.cpp; path = ../../../src/core/math_utils.cpp; sourceTree = "<group>"; };
+		EF102DD6194244E300F22450 /* map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = map.h; path = ../../../src/core/map.h; sourceTree = "<group>"; };
+		EF102DD7194244E300F22450 /* lux.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lux.h; path = ../../../src/core/lux.h; sourceTree = "<group>"; };
+		EF102DD8194244E300F22450 /* log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = log.h; path = ../../../src/core/log.h; sourceTree = "<group>"; };
+		EF102DD9194244E300F22450 /* log.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = log.cpp; path = ../../../src/core/log.cpp; sourceTree = "<group>"; };
+		EF102DDA194244E300F22450 /* json_serializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = json_serializer.h; path = ../../../src/core/json_serializer.h; sourceTree = "<group>"; };
+		EF102DDB194244E300F22450 /* json_serializer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = json_serializer.cpp; path = ../../../src/core/json_serializer.cpp; sourceTree = "<group>"; };
+		EF102DDC194244E300F22450 /* iserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iserializer.h; path = ../../../src/core/iserializer.h; sourceTree = "<group>"; };
+		EF102DDD194244E300F22450 /* input_system.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = input_system.h; path = ../../../src/core/input_system.h; sourceTree = "<group>"; };
+		EF102DDE194244E300F22450 /* hash_map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hash_map.h; path = ../../../src/core/hash_map.h; sourceTree = "<group>"; };
+		EF102DE0194244E300F22450 /* free_list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = free_list.h; path = ../../../src/core/free_list.h; sourceTree = "<group>"; };
+		EF102DE1194244E300F22450 /* font_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = font_manager.h; path = ../../../src/core/font_manager.h; sourceTree = "<group>"; };
+		EF102DE2194244E300F22450 /* font_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = font_manager.cpp; path = ../../../src/core/font_manager.cpp; sourceTree = "<group>"; };
+		EF102DE3194244E300F22450 /* fifo_allocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fifo_allocator.h; path = ../../../src/core/fifo_allocator.h; sourceTree = "<group>"; };
+		EF102DE4194244E300F22450 /* fifo_allocator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = fifo_allocator.cpp; path = ../../../src/core/fifo_allocator.cpp; sourceTree = "<group>"; };
+		EF102DE5194244E300F22450 /* event_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = event_manager.h; path = ../../../src/core/event_manager.h; sourceTree = "<group>"; };
+		EF102DE6194244E300F22450 /* event_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = event_manager.cpp; path = ../../../src/core/event_manager.cpp; sourceTree = "<group>"; };
+		EF102DE7194244E300F22450 /* delegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = delegate.h; path = ../../../src/core/delegate.h; sourceTree = "<group>"; };
+		EF102DE8194244E300F22450 /* delegate_list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = delegate_list.h; path = ../../../src/core/delegate_list.h; sourceTree = "<group>"; };
+		EF102DE9194244E300F22450 /* default_allocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = default_allocator.h; path = ../../../src/core/default_allocator.h; sourceTree = "<group>"; };
+		EF102DEA194244E300F22450 /* default_allocator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = default_allocator.cpp; path = ../../../src/core/default_allocator.cpp; sourceTree = "<group>"; };
+		EF102DEB194244E300F22450 /* crc32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = crc32.h; path = ../../../src/core/crc32.h; sourceTree = "<group>"; };
+		EF102DEC194244E300F22450 /* crc32.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = crc32.cpp; path = ../../../src/core/crc32.cpp; sourceTree = "<group>"; };
+		EF102DED194244E300F22450 /* blob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = blob.h; path = ../../../src/core/blob.h; sourceTree = "<group>"; };
+		EF102DEE194244E300F22450 /* blob.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = blob.cpp; path = ../../../src/core/blob.cpp; sourceTree = "<group>"; };
+		EF102DEF194244E300F22450 /* array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = array.h; path = ../../../src/core/array.h; sourceTree = "<group>"; };
+		EF102E35194269AA00F22450 /* atomic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = atomic.h; sourceTree = "<group>"; };
+		EF102E36194269AA00F22450 /* event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = event.h; sourceTree = "<group>"; };
+		EF102E37194269AA00F22450 /* lock_free_fixed_queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lock_free_fixed_queue.h; sourceTree = "<group>"; };
+		EF102E38194269AA00F22450 /* lock_free_queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lock_free_queue.h; sourceTree = "<group>"; };
+		EF102E39194269AA00F22450 /* mutex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mutex.h; sourceTree = "<group>"; };
+		EF102E3B194269AA00F22450 /* event.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = event.cpp; sourceTree = "<group>"; };
+		EF102E3C194269AA00F22450 /* mutex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mutex.cpp; sourceTree = "<group>"; };
+		EF102E3D194269AA00F22450 /* semaphore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = semaphore.cpp; sourceTree = "<group>"; };
+		EF102E3E194269AA00F22450 /* spin_mutex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = spin_mutex.cpp; sourceTree = "<group>"; };
+		EF102E3F194269AA00F22450 /* task.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = task.cpp; sourceTree = "<group>"; };
+		EF102E42194269AA00F22450 /* event.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = event.cpp; sourceTree = "<group>"; };
+		EF102E43194269AA00F22450 /* mutex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mutex.cpp; sourceTree = "<group>"; };
+		EF102E44194269AA00F22450 /* semaphore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = semaphore.cpp; sourceTree = "<group>"; };
+		EF102E45194269AA00F22450 /* spin_mutex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = spin_mutex.cpp; sourceTree = "<group>"; };
+		EF102E46194269AA00F22450 /* task.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = task.cpp; sourceTree = "<group>"; };
+		EF102E47194269AA00F22450 /* semaphore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = semaphore.h; sourceTree = "<group>"; };
+		EF102E48194269AA00F22450 /* spin_mutex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = spin_mutex.h; sourceTree = "<group>"; };
+		EF102E49194269AA00F22450 /* task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = task.h; sourceTree = "<group>"; };
+		EF102E4A194269AA00F22450 /* transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = transaction.h; sourceTree = "<group>"; };
+		EF102E5F1945B9B000F22450 /* thread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = thread.h; sourceTree = "<group>"; };
+		EF102E601945BAC400F22450 /* thread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = thread.cpp; sourceTree = "<group>"; };
+		EF102E66194753B300F22450 /* tcp_acceptor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tcp_acceptor.cpp; sourceTree = "<group>"; };
+		EF102E67194753B300F22450 /* tcp_connector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tcp_connector.cpp; sourceTree = "<group>"; };
+		EF102E68194753B300F22450 /* tcp_stream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tcp_stream.cpp; sourceTree = "<group>"; };
+		EF102E69194753B300F22450 /* tcp_acceptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tcp_acceptor.h; sourceTree = "<group>"; };
+		EF102E6A194753B300F22450 /* tcp_connector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tcp_connector.h; sourceTree = "<group>"; };
+		EF102E6B194753B300F22450 /* tcp_stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tcp_stream.h; sourceTree = "<group>"; };
+		EF102E6D194753B300F22450 /* base_entry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = base_entry.cpp; sourceTree = "<group>"; };
+		EF102E6E194753B300F22450 /* base_entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base_entry.h; sourceTree = "<group>"; };
+		EF102E6F194753B300F22450 /* enums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = enums.h; sourceTree = "<group>"; };
+		EF102E70194753B300F22450 /* framework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = framework.h; sourceTree = "<group>"; };
+		EF102E71194753B300F22450 /* group.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = group.cpp; sourceTree = "<group>"; };
+		EF102E72194753B300F22450 /* group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = group.h; sourceTree = "<group>"; };
+		EF102E73194753B300F22450 /* job.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = job.cpp; sourceTree = "<group>"; };
+		EF102E74194753B300F22450 /* job.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = job.h; sourceTree = "<group>"; };
+		EF102E75194753B300F22450 /* manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = manager.cpp; sourceTree = "<group>"; };
+		EF102E76194753B300F22450 /* manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = manager.h; sourceTree = "<group>"; };
+		EF102E77194753B300F22450 /* scheduler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scheduler.cpp; sourceTree = "<group>"; };
+		EF102E78194753B300F22450 /* scheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scheduler.h; sourceTree = "<group>"; };
+		EF102E79194753B300F22450 /* worker_thread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = worker_thread.cpp; sourceTree = "<group>"; };
+		EF102E7A194753B300F22450 /* worker_thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = worker_thread.h; sourceTree = "<group>"; };
+		EF102E90194753E100F22450 /* disk_file_device.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = disk_file_device.cpp; sourceTree = "<group>"; };
+		EF102E91194753E100F22450 /* disk_file_device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = disk_file_device.h; sourceTree = "<group>"; };
+		EF102E92194753E100F22450 /* file_events_device.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = file_events_device.cpp; sourceTree = "<group>"; };
+		EF102E93194753E100F22450 /* file_events_device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = file_events_device.h; sourceTree = "<group>"; };
+		EF102E94194753E100F22450 /* file_system.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = file_system.cpp; sourceTree = "<group>"; };
+		EF102E95194753E100F22450 /* file_system.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = file_system.h; sourceTree = "<group>"; };
+		EF102E96194753E100F22450 /* ifile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ifile.h; sourceTree = "<group>"; };
+		EF102E97194753E100F22450 /* ifile_device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ifile_device.h; sourceTree = "<group>"; };
+		EF102E98194753E100F22450 /* ifile_system_defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ifile_system_defines.h; sourceTree = "<group>"; };
+		EF102E99194753E100F22450 /* memory_file_device.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = memory_file_device.cpp; sourceTree = "<group>"; };
+		EF102E9A194753E100F22450 /* memory_file_device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = memory_file_device.h; sourceTree = "<group>"; };
+		EF102E9B194753E100F22450 /* tcp_file_device.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tcp_file_device.cpp; sourceTree = "<group>"; };
+		EF102E9C194753E100F22450 /* tcp_file_device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tcp_file_device.h; sourceTree = "<group>"; };
+		EF102E9D194753E100F22450 /* tcp_file_server.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tcp_file_server.cpp; sourceTree = "<group>"; };
+		EF102E9E194753E100F22450 /* tcp_file_server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tcp_file_server.h; sourceTree = "<group>"; };
+		EF102EAF1947540300F22450 /* lux_unit_tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lux_unit_tests.h; sourceTree = "<group>"; };
+		EF102EB01947540300F22450 /* platform_defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = platform_defines.h; sourceTree = "<group>"; };
+		EF102EB11947540300F22450 /* unit_test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unit_test.h; sourceTree = "<group>"; };
+		EF102EB21947540300F22450 /* unit_test_app.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = unit_test_app.cpp; sourceTree = "<group>"; };
+		EF102EB31947540300F22450 /* unit_test_app.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unit_test_app.h; sourceTree = "<group>"; };
+		EF102EB41947540300F22450 /* unit_test_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = unit_test_manager.cpp; sourceTree = "<group>"; };
+		EF102EB51947540300F22450 /* unit_test_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unit_test_manager.h; sourceTree = "<group>"; };
+		EF102EB71947540300F22450 /* ut_resource_managers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ut_resource_managers.cpp; sourceTree = "<group>"; };
+		EF102EB91947540300F22450 /* ut_file_system.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ut_file_system.cpp; sourceTree = "<group>"; };
+		EF102EBA1947540300F22450 /* ut_hash_map.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ut_hash_map.cpp; sourceTree = "<group>"; };
+		EF102EBB1947540300F22450 /* ut_mtjd_framework.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ut_mtjd_framework.cpp; sourceTree = "<group>"; };
+		EF102EBC1947540300F22450 /* ut_path.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ut_path.cpp; sourceTree = "<group>"; };
+		EF102EBD1947540300F22450 /* ut_quat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ut_quat.cpp; sourceTree = "<group>"; };
+		EF102EBE1947540300F22450 /* ut_transaction_queue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ut_transaction_queue.cpp; sourceTree = "<group>"; };
+		EF102F7E194754A700F22450 /* tcp_acceptor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tcp_acceptor.cpp; sourceTree = "<group>"; };
+		EF102F80194754B600F22450 /* tcp_connector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tcp_connector.cpp; sourceTree = "<group>"; };
+		EF102F82194754CF00F22450 /* tcp_stream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tcp_stream.cpp; sourceTree = "<group>"; };
+		EF102F871948E62800F22450 /* os_file.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = os_file.cpp; sourceTree = "<group>"; };
+		EF102F8A1948E62800F22450 /* os_file.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = os_file.cpp; sourceTree = "<group>"; };
+		EF102F901948E67900F22450 /* os_file.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = os_file.h; sourceTree = "<group>"; };
+		EF102F921948F25000F22450 /* atomic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atomic.cpp; sourceTree = "<group>"; };
+		EF102F941949EBD600F22450 /* atomic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atomic.cpp; sourceTree = "<group>"; };
+		EF102F971949EC3600F22450 /* input_system.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = input_system.cpp; sourceTree = "<group>"; };
+		EF102F991949EC3600F22450 /* timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = timer.cpp; sourceTree = "<group>"; };
+		EF102F9E1949EC4600F22450 /* input_system.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = input_system.cpp; sourceTree = "<group>"; };
+		EF102F9F1949EC4600F22450 /* timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = timer.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF102D83194243DF00F22450 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF102FA21949F43100F22450 /* libcore.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF102DA6194244B100F22450 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF102D7B194243C900F22450 = {
+			isa = PBXGroup;
+			children = (
+				EF102DAD194244BD00F22450 /* core */,
+				EF102D88194243E000F22450 /* unit_tests */,
+				EF102D87194243DF00F22450 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF102D87194243DF00F22450 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF102D86194243DF00F22450 /* unit_tests */,
+				EF102DA9194244B100F22450 /* libcore.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF102D88194243E000F22450 /* unit_tests */ = {
+			isa = PBXGroup;
+			children = (
+				EF102EAE1947540300F22450 /* suite */,
+				EF102EB61947540300F22450 /* engine */,
+				EF102EB81947540300F22450 /* core */,
+				EF102D911942440C00F22450 /* main.cpp */,
+			);
+			path = unit_tests;
+			sourceTree = "<group>";
+		};
+		EF102DAD194244BD00F22450 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				EF102F9D1949EC4600F22450 /* pc */,
+				EF102F961949EC3600F22450 /* osx */,
+				EF102E8F194753E100F22450 /* FS */,
+				EF102E64194753B200F22450 /* Net */,
+				EF102E6C194753B300F22450 /* MTJD */,
+				EF102E34194269AA00F22450 /* MT */,
+				EF102DAE194244E300F22450 /* vec4.h */,
+				EF102DAF194244E300F22450 /* vec3.h */,
+				EF102DB0194244E300F22450 /* timer.h */,
+				EF102DB2194244E300F22450 /* string.h */,
+				EF102DB3194244E300F22450 /* static_array.h */,
+				EF102DB4194244E300F22450 /* stack_allocator.h */,
+				EF102DB5194244E300F22450 /* resource.h */,
+				EF102DB6194244E300F22450 /* resource.cpp */,
+				EF102DB7194244E300F22450 /* resource_manager.h */,
+				EF102DB8194244E300F22450 /* resource_manager.cpp */,
+				EF102DB9194244E300F22450 /* resource_manager_base.h */,
+				EF102DBA194244E300F22450 /* resource_manager_base.cpp */,
+				EF102DBB194244E300F22450 /* queue.h */,
+				EF102DBC194244E300F22450 /* quat.h */,
+				EF102DBD194244E300F22450 /* quat.cpp */,
+				EF102DBE194244E300F22450 /* profiler.h */,
+				EF102DBF194244E300F22450 /* profiler.cpp */,
+				EF102DC0194244E300F22450 /* pod_hash_map.h */,
+				EF102DC1194244E300F22450 /* pod_array.h */,
+				EF102DC3194244E300F22450 /* path.h */,
+				EF102DC4194244E300F22450 /* path.cpp */,
+				EF102DC5194244E300F22450 /* path_utils.h */,
+				EF102DC7194244E300F22450 /* os_file.h */,
+				EF102DC9194244E300F22450 /* new.h */,
+				EF102DCA194244E300F22450 /* new.cpp */,
+				EF102DCB194244E300F22450 /* new_macros.h */,
+				EF102DCC194244E300F22450 /* new_macros.cpp */,
+				EF102DD0194244E300F22450 /* memory_tracker.h */,
+				EF102DD1194244E300F22450 /* memory_tracker.cpp */,
+				EF102DD2194244E300F22450 /* matrix.h */,
+				EF102DD3194244E300F22450 /* matrix.cpp */,
+				EF102DD4194244E300F22450 /* math_utils.h */,
+				EF102DD5194244E300F22450 /* math_utils.cpp */,
+				EF102DD6194244E300F22450 /* map.h */,
+				EF102DD7194244E300F22450 /* lux.h */,
+				EF102DD8194244E300F22450 /* log.h */,
+				EF102DD9194244E300F22450 /* log.cpp */,
+				EF102DDA194244E300F22450 /* json_serializer.h */,
+				EF102DDB194244E300F22450 /* json_serializer.cpp */,
+				EF102DDC194244E300F22450 /* iserializer.h */,
+				EF102DDD194244E300F22450 /* input_system.h */,
+				EF102DDE194244E300F22450 /* hash_map.h */,
+				EF102DE0194244E300F22450 /* free_list.h */,
+				EF102DE1194244E300F22450 /* font_manager.h */,
+				EF102DE2194244E300F22450 /* font_manager.cpp */,
+				EF102DE3194244E300F22450 /* fifo_allocator.h */,
+				EF102DE4194244E300F22450 /* fifo_allocator.cpp */,
+				EF102DE5194244E300F22450 /* event_manager.h */,
+				EF102DE6194244E300F22450 /* event_manager.cpp */,
+				EF102DE7194244E300F22450 /* delegate.h */,
+				EF102DE8194244E300F22450 /* delegate_list.h */,
+				EF102DE9194244E300F22450 /* default_allocator.h */,
+				EF102DEA194244E300F22450 /* default_allocator.cpp */,
+				EF102DEB194244E300F22450 /* crc32.h */,
+				EF102DEC194244E300F22450 /* crc32.cpp */,
+				EF102DED194244E300F22450 /* blob.h */,
+				EF102DEE194244E300F22450 /* blob.cpp */,
+				EF102DEF194244E300F22450 /* array.h */,
+			);
+			name = core;
+			sourceTree = "<group>";
+		};
+		EF102E34194269AA00F22450 /* MT */ = {
+			isa = PBXGroup;
+			children = (
+				EF102E35194269AA00F22450 /* atomic.h */,
+				EF102E36194269AA00F22450 /* event.h */,
+				EF102E37194269AA00F22450 /* lock_free_fixed_queue.h */,
+				EF102E38194269AA00F22450 /* lock_free_queue.h */,
+				EF102E39194269AA00F22450 /* mutex.h */,
+				EF102E3A194269AA00F22450 /* osx */,
+				EF102E40194269AA00F22450 /* pc */,
+				EF102E47194269AA00F22450 /* semaphore.h */,
+				EF102E48194269AA00F22450 /* spin_mutex.h */,
+				EF102E49194269AA00F22450 /* task.h */,
+				EF102E4A194269AA00F22450 /* transaction.h */,
+				EF102E5F1945B9B000F22450 /* thread.h */,
+			);
+			name = MT;
+			path = ../../../src/core/MT;
+			sourceTree = "<group>";
+		};
+		EF102E3A194269AA00F22450 /* osx */ = {
+			isa = PBXGroup;
+			children = (
+				EF102F921948F25000F22450 /* atomic.cpp */,
+				EF102E3B194269AA00F22450 /* event.cpp */,
+				EF102E3C194269AA00F22450 /* mutex.cpp */,
+				EF102E3D194269AA00F22450 /* semaphore.cpp */,
+				EF102E3E194269AA00F22450 /* spin_mutex.cpp */,
+				EF102E3F194269AA00F22450 /* task.cpp */,
+				EF102E601945BAC400F22450 /* thread.cpp */,
+			);
+			path = osx;
+			sourceTree = "<group>";
+		};
+		EF102E40194269AA00F22450 /* pc */ = {
+			isa = PBXGroup;
+			children = (
+				EF102F941949EBD600F22450 /* atomic.cpp */,
+				EF102E42194269AA00F22450 /* event.cpp */,
+				EF102E43194269AA00F22450 /* mutex.cpp */,
+				EF102E44194269AA00F22450 /* semaphore.cpp */,
+				EF102E45194269AA00F22450 /* spin_mutex.cpp */,
+				EF102E46194269AA00F22450 /* task.cpp */,
+			);
+			path = pc;
+			sourceTree = "<group>";
+		};
+		EF102E64194753B200F22450 /* Net */ = {
+			isa = PBXGroup;
+			children = (
+				EF102F7D1947547F00F22450 /* osx */,
+				EF102E65194753B300F22450 /* pc */,
+				EF102E69194753B300F22450 /* tcp_acceptor.h */,
+				EF102E6A194753B300F22450 /* tcp_connector.h */,
+				EF102E6B194753B300F22450 /* tcp_stream.h */,
+			);
+			name = Net;
+			path = ../../../src/core/Net;
+			sourceTree = "<group>";
+		};
+		EF102E65194753B300F22450 /* pc */ = {
+			isa = PBXGroup;
+			children = (
+				EF102E66194753B300F22450 /* tcp_acceptor.cpp */,
+				EF102E67194753B300F22450 /* tcp_connector.cpp */,
+				EF102E68194753B300F22450 /* tcp_stream.cpp */,
+			);
+			path = pc;
+			sourceTree = "<group>";
+		};
+		EF102E6C194753B300F22450 /* MTJD */ = {
+			isa = PBXGroup;
+			children = (
+				EF102E6D194753B300F22450 /* base_entry.cpp */,
+				EF102E6E194753B300F22450 /* base_entry.h */,
+				EF102E6F194753B300F22450 /* enums.h */,
+				EF102E70194753B300F22450 /* framework.h */,
+				EF102E71194753B300F22450 /* group.cpp */,
+				EF102E72194753B300F22450 /* group.h */,
+				EF102E73194753B300F22450 /* job.cpp */,
+				EF102E74194753B300F22450 /* job.h */,
+				EF102E75194753B300F22450 /* manager.cpp */,
+				EF102E76194753B300F22450 /* manager.h */,
+				EF102E77194753B300F22450 /* scheduler.cpp */,
+				EF102E78194753B300F22450 /* scheduler.h */,
+				EF102E79194753B300F22450 /* worker_thread.cpp */,
+				EF102E7A194753B300F22450 /* worker_thread.h */,
+			);
+			name = MTJD;
+			path = ../../../src/core/MTJD;
+			sourceTree = "<group>";
+		};
+		EF102E8F194753E100F22450 /* FS */ = {
+			isa = PBXGroup;
+			children = (
+				EF102F901948E67900F22450 /* os_file.h */,
+				EF102F861948E62800F22450 /* OSX */,
+				EF102F891948E62800F22450 /* PC */,
+				EF102E90194753E100F22450 /* disk_file_device.cpp */,
+				EF102E91194753E100F22450 /* disk_file_device.h */,
+				EF102E92194753E100F22450 /* file_events_device.cpp */,
+				EF102E93194753E100F22450 /* file_events_device.h */,
+				EF102E94194753E100F22450 /* file_system.cpp */,
+				EF102E95194753E100F22450 /* file_system.h */,
+				EF102E96194753E100F22450 /* ifile.h */,
+				EF102E97194753E100F22450 /* ifile_device.h */,
+				EF102E98194753E100F22450 /* ifile_system_defines.h */,
+				EF102E99194753E100F22450 /* memory_file_device.cpp */,
+				EF102E9A194753E100F22450 /* memory_file_device.h */,
+				EF102E9B194753E100F22450 /* tcp_file_device.cpp */,
+				EF102E9C194753E100F22450 /* tcp_file_device.h */,
+				EF102E9D194753E100F22450 /* tcp_file_server.cpp */,
+				EF102E9E194753E100F22450 /* tcp_file_server.h */,
+			);
+			name = FS;
+			path = ../../../src/core/FS;
+			sourceTree = "<group>";
+		};
+		EF102EAE1947540300F22450 /* suite */ = {
+			isa = PBXGroup;
+			children = (
+				EF102EAF1947540300F22450 /* lux_unit_tests.h */,
+				EF102EB01947540300F22450 /* platform_defines.h */,
+				EF102EB11947540300F22450 /* unit_test.h */,
+				EF102EB21947540300F22450 /* unit_test_app.cpp */,
+				EF102EB31947540300F22450 /* unit_test_app.h */,
+				EF102EB41947540300F22450 /* unit_test_manager.cpp */,
+				EF102EB51947540300F22450 /* unit_test_manager.h */,
+			);
+			name = suite;
+			path = ../../../../src/unit_tests/suite;
+			sourceTree = "<group>";
+		};
+		EF102EB61947540300F22450 /* engine */ = {
+			isa = PBXGroup;
+			children = (
+				EF102EB71947540300F22450 /* ut_resource_managers.cpp */,
+			);
+			name = engine;
+			path = ../../../../src/unit_tests/engine;
+			sourceTree = "<group>";
+		};
+		EF102EB81947540300F22450 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				EF102EB91947540300F22450 /* ut_file_system.cpp */,
+				EF102EBA1947540300F22450 /* ut_hash_map.cpp */,
+				EF102EBB1947540300F22450 /* ut_mtjd_framework.cpp */,
+				EF102EBC1947540300F22450 /* ut_path.cpp */,
+				EF102EBD1947540300F22450 /* ut_quat.cpp */,
+				EF102EBE1947540300F22450 /* ut_transaction_queue.cpp */,
+			);
+			name = core;
+			path = ../../../../src/unit_tests/core;
+			sourceTree = "<group>";
+		};
+		EF102F7D1947547F00F22450 /* osx */ = {
+			isa = PBXGroup;
+			children = (
+				EF102F7E194754A700F22450 /* tcp_acceptor.cpp */,
+				EF102F80194754B600F22450 /* tcp_connector.cpp */,
+				EF102F82194754CF00F22450 /* tcp_stream.cpp */,
+			);
+			name = osx;
+			sourceTree = "<group>";
+		};
+		EF102F861948E62800F22450 /* OSX */ = {
+			isa = PBXGroup;
+			children = (
+				EF102F871948E62800F22450 /* os_file.cpp */,
+			);
+			path = OSX;
+			sourceTree = "<group>";
+		};
+		EF102F891948E62800F22450 /* PC */ = {
+			isa = PBXGroup;
+			children = (
+				EF102F8A1948E62800F22450 /* os_file.cpp */,
+			);
+			path = PC;
+			sourceTree = "<group>";
+		};
+		EF102F961949EC3600F22450 /* osx */ = {
+			isa = PBXGroup;
+			children = (
+				EF102F971949EC3600F22450 /* input_system.cpp */,
+				EF102F991949EC3600F22450 /* timer.cpp */,
+			);
+			name = osx;
+			path = ../../../src/core/osx;
+			sourceTree = "<group>";
+		};
+		EF102F9D1949EC4600F22450 /* pc */ = {
+			isa = PBXGroup;
+			children = (
+				EF102F9E1949EC4600F22450 /* input_system.cpp */,
+				EF102F9F1949EC4600F22450 /* timer.cpp */,
+			);
+			name = pc;
+			path = ../../../src/core/pc;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		EF102DA7194244B100F22450 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF102E07194244E300F22450 /* os_file.h in Headers */,
+				EF102DF5194244E300F22450 /* static_array.h in Headers */,
+				EF102E17194244E300F22450 /* json_serializer.h in Headers */,
+				EF102E2B194244E300F22450 /* array.h in Headers */,
+				EF102E7F194753B300F22450 /* tcp_connector.h in Headers */,
+				EF102E4F194269AA00F22450 /* mutex.h in Headers */,
+				EF102DF2194244E300F22450 /* timer.h in Headers */,
+				EF102E0B194244E300F22450 /* new_macros.h in Headers */,
+				EF102EA2194753E100F22450 /* file_events_device.h in Headers */,
+				EF102EA9194753E100F22450 /* memory_file_device.h in Headers */,
+				EF102E4D194269AA00F22450 /* lock_free_fixed_queue.h in Headers */,
+				EF102E5C194269AA00F22450 /* spin_mutex.h in Headers */,
+				EF102E29194244E300F22450 /* blob.h in Headers */,
+				EF102DFD194244E300F22450 /* queue.h in Headers */,
+				EF102E1C194244E300F22450 /* free_list.h in Headers */,
+				EF102E8E194753B300F22450 /* worker_thread.h in Headers */,
+				EF102EA7194753E100F22450 /* ifile_system_defines.h in Headers */,
+				EF102E00194244E300F22450 /* profiler.h in Headers */,
+				EF102E88194753B300F22450 /* job.h in Headers */,
+				EF102EAD194753E100F22450 /* tcp_file_server.h in Headers */,
+				EF102DFE194244E300F22450 /* quat.h in Headers */,
+				EF102E84194753B300F22450 /* framework.h in Headers */,
+				EF102F911948E67900F22450 /* os_file.h in Headers */,
+				EF102E7E194753B300F22450 /* tcp_acceptor.h in Headers */,
+				EF102E15194244E300F22450 /* log.h in Headers */,
+				EF102E1F194244E300F22450 /* fifo_allocator.h in Headers */,
+				EF102E8C194753B300F22450 /* scheduler.h in Headers */,
+				EF102E04194244E300F22450 /* path.h in Headers */,
+				EF102E80194753B300F22450 /* tcp_stream.h in Headers */,
+				EF102E11194244E300F22450 /* math_utils.h in Headers */,
+				EF102E5B194269AA00F22450 /* semaphore.h in Headers */,
+				EF102E13194244E300F22450 /* map.h in Headers */,
+				EF102E1B194244E300F22450 /* hash_map.h in Headers */,
+				EF102E1A194244E300F22450 /* input_system.h in Headers */,
+				EF102DF9194244E300F22450 /* resource_manager.h in Headers */,
+				EF102E03194244E300F22450 /* pod_array.h in Headers */,
+				EF102E5D194269AA00F22450 /* task.h in Headers */,
+				EF102E5E194269AA00F22450 /* transaction.h in Headers */,
+				EF102EA0194753E100F22450 /* disk_file_device.h in Headers */,
+				EF102E1D194244E300F22450 /* font_manager.h in Headers */,
+				EF102EA5194753E100F22450 /* ifile.h in Headers */,
+				EF102E14194244E300F22450 /* lux.h in Headers */,
+				EF102E09194244E300F22450 /* new.h in Headers */,
+				EF102E4C194269AA00F22450 /* event.h in Headers */,
+				EF102DF7194244E300F22450 /* resource.h in Headers */,
+				EF102E0F194244E300F22450 /* matrix.h in Headers */,
+				EF102E24194244E300F22450 /* delegate_list.h in Headers */,
+				EF102DF4194244E300F22450 /* string.h in Headers */,
+				EF102E8A194753B300F22450 /* manager.h in Headers */,
+				EF102E4B194269AA00F22450 /* atomic.h in Headers */,
+				EF102E21194244E300F22450 /* event_manager.h in Headers */,
+				EF102DF0194244E300F22450 /* vec4.h in Headers */,
+				EF102E27194244E300F22450 /* crc32.h in Headers */,
+				EF102E83194753B300F22450 /* enums.h in Headers */,
+				EF102DFB194244E300F22450 /* resource_manager_base.h in Headers */,
+				EF102E82194753B300F22450 /* base_entry.h in Headers */,
+				EF102EA4194753E100F22450 /* file_system.h in Headers */,
+				EF102DF1194244E300F22450 /* vec3.h in Headers */,
+				EF102E02194244E300F22450 /* pod_hash_map.h in Headers */,
+				EF102DF6194244E300F22450 /* stack_allocator.h in Headers */,
+				EF102E4E194269AA00F22450 /* lock_free_queue.h in Headers */,
+				EF102E86194753B300F22450 /* group.h in Headers */,
+				EF102E0D194244E300F22450 /* memory_tracker.h in Headers */,
+				EF102E19194244E300F22450 /* iserializer.h in Headers */,
+				EF102EA6194753E100F22450 /* ifile_device.h in Headers */,
+				EF102E06194244E300F22450 /* path_utils.h in Headers */,
+				EF102EAB194753E100F22450 /* tcp_file_device.h in Headers */,
+				EF102E25194244E300F22450 /* default_allocator.h in Headers */,
+				EF102E23194244E300F22450 /* delegate.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		EF102D85194243DF00F22450 /* unit_tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF102D8D194243E000F22450 /* Build configuration list for PBXNativeTarget "unit_tests" */;
+			buildPhases = (
+				EF102D82194243DF00F22450 /* Sources */,
+				EF102D83194243DF00F22450 /* Frameworks */,
+				EF102D84194243DF00F22450 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF102E3219424E1100F22450 /* PBXTargetDependency */,
+			);
+			name = unit_tests;
+			productName = unit_tests;
+			productReference = EF102D86194243DF00F22450 /* unit_tests */;
+			productType = "com.apple.product-type.tool";
+		};
+		EF102DA8194244B100F22450 /* core */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF102DAA194244B200F22450 /* Build configuration list for PBXNativeTarget "core" */;
+			buildPhases = (
+				EF102DA5194244B100F22450 /* Sources */,
+				EF102DA6194244B100F22450 /* Frameworks */,
+				EF102DA7194244B100F22450 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = core;
+			productName = core;
+			productReference = EF102DA9194244B100F22450 /* libcore.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF102D7C194243C900F22450 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = EF102D7F194243C900F22450 /* Build configuration list for PBXProject "LuxEngine" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EF102D7B194243C900F22450;
+			productRefGroup = EF102D87194243DF00F22450 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF102D85194243DF00F22450 /* unit_tests */,
+				EF102DA8194244B100F22450 /* core */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF102D82194243DF00F22450 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF102F461947540300F22450 /* ut_mtjd_framework.cpp in Sources */,
+				EF102F471947540300F22450 /* ut_path.cpp in Sources */,
+				EF102D941942440C00F22450 /* main.cpp in Sources */,
+				EF102F421947540300F22450 /* unit_test_manager.cpp in Sources */,
+				EF102F451947540300F22450 /* ut_hash_map.cpp in Sources */,
+				EF102F411947540300F22450 /* unit_test_app.cpp in Sources */,
+				EF102F441947540300F22450 /* ut_file_system.cpp in Sources */,
+				EF102F481947540300F22450 /* ut_quat.cpp in Sources */,
+				EF102F491947540300F22450 /* ut_transaction_queue.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF102DA5194244B100F22450 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF102F9A1949EC3600F22450 /* input_system.cpp in Sources */,
+				EF102EAC194753E100F22450 /* tcp_file_server.cpp in Sources */,
+				EF102E01194244E300F22450 /* profiler.cpp in Sources */,
+				EF102F7F194754A700F22450 /* tcp_acceptor.cpp in Sources */,
+				EF102E0C194244E300F22450 /* new_macros.cpp in Sources */,
+				EF102E2A194244E300F22450 /* blob.cpp in Sources */,
+				EF102E53194269AA00F22450 /* spin_mutex.cpp in Sources */,
+				EF102E1E194244E300F22450 /* font_manager.cpp in Sources */,
+				EF102E50194269AA00F22450 /* event.cpp in Sources */,
+				EF102E9F194753E100F22450 /* disk_file_device.cpp in Sources */,
+				EF102F83194754CF00F22450 /* tcp_stream.cpp in Sources */,
+				EF102E28194244E300F22450 /* crc32.cpp in Sources */,
+				EF102E87194753B300F22450 /* job.cpp in Sources */,
+				EF102EA1194753E100F22450 /* file_events_device.cpp in Sources */,
+				EF102E16194244E300F22450 /* log.cpp in Sources */,
+				EF102E81194753B300F22450 /* base_entry.cpp in Sources */,
+				EF102E26194244E300F22450 /* default_allocator.cpp in Sources */,
+				EF102EAA194753E100F22450 /* tcp_file_device.cpp in Sources */,
+				EF102F8C1948E62800F22450 /* os_file.cpp in Sources */,
+				EF102E621945BAC400F22450 /* thread.cpp in Sources */,
+				EF102DF8194244E300F22450 /* resource.cpp in Sources */,
+				EF102E0E194244E300F22450 /* memory_tracker.cpp in Sources */,
+				EF102E0A194244E300F22450 /* new.cpp in Sources */,
+				EF102EA3194753E100F22450 /* file_system.cpp in Sources */,
+				EF102E22194244E300F22450 /* event_manager.cpp in Sources */,
+				EF102E12194244E300F22450 /* math_utils.cpp in Sources */,
+				EF102F9C1949EC3600F22450 /* timer.cpp in Sources */,
+				EF102EA8194753E100F22450 /* memory_file_device.cpp in Sources */,
+				EF102DFC194244E300F22450 /* resource_manager_base.cpp in Sources */,
+				EF102E52194269AA00F22450 /* semaphore.cpp in Sources */,
+				EF102F931948F25000F22450 /* atomic.cpp in Sources */,
+				EF102DFF194244E300F22450 /* quat.cpp in Sources */,
+				EF102E85194753B300F22450 /* group.cpp in Sources */,
+				EF102E8D194753B300F22450 /* worker_thread.cpp in Sources */,
+				EF102E89194753B300F22450 /* manager.cpp in Sources */,
+				EF102E10194244E300F22450 /* matrix.cpp in Sources */,
+				EF102DFA194244E300F22450 /* resource_manager.cpp in Sources */,
+				EF102E8B194753B300F22450 /* scheduler.cpp in Sources */,
+				EF102E20194244E300F22450 /* fifo_allocator.cpp in Sources */,
+				EF102E54194269AA00F22450 /* task.cpp in Sources */,
+				EF102F81194754B600F22450 /* tcp_connector.cpp in Sources */,
+				EF102E18194244E300F22450 /* json_serializer.cpp in Sources */,
+				EF102E05194244E300F22450 /* path.cpp in Sources */,
+				EF102E51194269AA00F22450 /* mutex.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF102E3219424E1100F22450 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF102DA8194244B100F22450 /* core */;
+			targetProxy = EF102E3119424E1100F22450 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EF102D80194243C900F22450 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		EF102D81194243C900F22450 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		EF102D8E194243E000F22450 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				"GCC_ENABLE_CPP_EXCEPTIONS[arch=*]" = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = (
+					OSX,
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = ../../../src/;
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		EF102D8F194243E000F22450 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				"GCC_ENABLE_CPP_EXCEPTIONS[arch=*]" = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = OSX;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		EF102DAB194244B200F22450 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = (
+					OSX,
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = ../../../src/;
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		EF102DAC194244B200F22450 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF102D7F194243C900F22450 /* Build configuration list for PBXProject "LuxEngine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF102D80194243C900F22450 /* Debug */,
+				EF102D81194243C900F22450 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF102D8D194243E000F22450 /* Build configuration list for PBXNativeTarget "unit_tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF102D8E194243E000F22450 /* Debug */,
+				EF102D8F194243E000F22450 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EF102DAA194244B200F22450 /* Build configuration list for PBXNativeTarget "core" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF102DAB194244B200F22450 /* Debug */,
+				EF102DAC194244B200F22450 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF102D7C194243C900F22450 /* Project object */;
+}

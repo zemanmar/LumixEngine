@@ -53,7 +53,7 @@ namespace Lux
 	{
 		static size_t get(const void* key)
 		{
-			size_t x = ((int32_t(key) >> 16) ^ int32_t(key)) * 0x45d9f3b;
+			size_t x = ((uintptr_t(key) >> 16) ^ uintptr_t(key)) * 0x45d9f3b;
 			x = ((x >> 16) ^ x) * 0x45d9f3b;
 			x = ((x >> 16) ^ x);
 			return x;
@@ -105,7 +105,7 @@ namespace Lux
 			typedef PODHashMap<key_type, value_type, hasher_type, allocator_type> hm_type;
 			typedef HashMapIterator<key_type, value_type, hasher_type, allocator_type> my_type;
 
-			friend class hm_type;
+			friend class PODHashMap<key_type, value_type, hasher_type, allocator_type>;
 
 			HashMapIterator()
 				: m_hash_map(NULL)

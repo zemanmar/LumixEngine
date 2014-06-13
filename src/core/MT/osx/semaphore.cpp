@@ -1,59 +1,44 @@
-#include "platform/semaphore.h"
-#include <sys/semaphore.h>
-#include <cassert>
+#include "core/MT/semaphore.h"
+
+#include <stdio.h>
+#include <errno.h>
+#include <unistd.h>
 
 namespace Lux
 {
 	namespace MT
 	{
-		class OSXSemaphore : public Semaphore
+		Semaphore::Semaphore(int init_count, int max_count)
 		{
-		public:
-			virtual void signal() LUX_OVERRIDE;
-			
-			virtual void wait() LUX_OVERRIDE;
-			virtual bool poll() LUX_OVERRIDE;
-
-			OSXSemaphore(const char* name, int init_count, int max_count);
-			~OSXSemaphore();
-
-		private:
-			sem_t m_id;
-		};
-
-		Semaphore* Semaphore::create(const char* name, int init_count, int max_count)
-		{
-			return new OSXSemaphore(name, init_count, max_count);
+			snprintf(name, 255, "%d/%p", getpid(), this);
+			m_id = ::sem_open(name, O_CREAT | O_EXCL, 0666, init_count);
+			if (SEM_FAILED == m_id)
+			{
+				TODO("Resolve posible name colisions");
+				printf("sem_open name '%s' failed! Reason: %d\n", name, errno);
+				ASSERT(0);
+			}
 		}
-
-		void Semaphore::destroy(Semaphore* sempahore)
+		
+		Semaphore::~Semaphore()
 		{
-			delete static_cast<OSXSemaphore*>(sempahore);
+			::sem_close(m_id);
+			::sem_unlink(name);
 		}
-
-		void OSXSemaphore::signal()
+		
+		void Semaphore::signal()
 		{
-			::sem_post(&m_id);
+			::sem_post(m_id);
 		}
-
-		void OSXSemaphore::wait()
+		
+		void Semaphore::wait()
 		{
-			::sem_wait(&m_id);
+			int ret = ::sem_wait(m_id);
 		}
-
-		bool OSXSemaphore::poll()
+		
+		bool Semaphore::poll()
 		{
-			return 0 == ::sem_trywait(&m_id);
-		}
-
-		OSXSemaphore::OSXSemaphore(const char* name, int init_count, int max_count)
-		{
-			::sem_init(&m_id, 0, init_count);
-		}
-
-		OSXSemaphore::~OSXSemaphore()
-		{
-			::sem_destroy(&m_id);
+			return 0 == ::sem_trywait(m_id);
 		}
 	}; // ~namespac MT
 } // ~namespace Lux

@@ -103,7 +103,7 @@ struct LUX_CORE_API Vec4
 		this->x = x;
 		this->y = y;
 		this->z = z;
-		this->w = w;
+TODO("		this->w = w;")
 	}
 	
 	inline float length() const

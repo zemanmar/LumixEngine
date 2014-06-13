@@ -1,4 +1,4 @@
-#include "input_system.h"
+#include "core/input_system.h"
 #include "core/map.h"
 #include "core/string.h"
 
@@ -13,7 +13,7 @@ namespace Lux
 			InputSystem::InputType type;
 			int key;
 		};
-		map<unsigned int, Action> actions;
+		Map<unsigned int, Action> actions;
 		float mouse_rel_x;
 		float mouse_rel_y;
 	};

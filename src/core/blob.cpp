@@ -1,5 +1,7 @@
+#include "core/lux.h"
 #include "core/blob.h"
 #include <new>
+#include <string.h>
 
 namespace Lux
 {

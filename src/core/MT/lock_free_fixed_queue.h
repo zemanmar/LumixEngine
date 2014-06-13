@@ -9,7 +9,7 @@ namespace Lux
 	{
 		template <class T, int32_t size> class LockFreeFixedQueue
 		{
-			static_assert(std::is_trivially_copyable<T>::value, "T must be trivially copyable!");
+//			static_assert(std::is_trivially_copyable<T>::value, "T must be trivially copyable!");
 		public:
 			LockFreeFixedQueue()
 				: m_al(0)
@@ -43,7 +43,7 @@ namespace Lux
 
 						Node cur_val(alloc_ptr, m_alloc[alloc_idx].data.pair.el);
 
-						if (cur_val.data.pair.el > -1)
+						if (cur_val.data.pair.el > int32_t(-1))
 						{
 							Node new_val(alloc_ptr, -1);
 
@@ -147,7 +147,7 @@ namespace Lux
 			}
 
 
-			bool isAborted() const
+			inline bool isAborted() const
 			{
 				return m_aborted;
 			}

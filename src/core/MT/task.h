@@ -2,21 +2,14 @@
 
 #include "core/lux.h"
 
+#ifdef OSX
+#include <pthread.h>
+#endif //~OSX
+
 namespace Lux
 {
 	namespace MT
 	{
-		LUX_CORE_API void sleep(uint32_t miliseconds);
-		LUX_CORE_API inline void yield() { sleep(0); }
-
-		LUX_CORE_API uint32_t getCPUsCount();
-		
-		LUX_CORE_API uint32_t getCurrentThreadID();
-		LUX_CORE_API uint32_t getProccessAffinityMask();
-
-		LUX_CORE_API bool isMainThread();
-		LUX_CORE_API void setMainThread();
-
 		class LUX_CORE_API Task
 		{
 		public:
@@ -41,7 +34,7 @@ namespace Lux
 			bool isForceExit() const;
 
 			void forceExit(bool wait);
-			void exit(int32_t exitCode);
+			void exit(int32_t exit_code);
 
 		private:
 			struct TaskImpl* m_implementation;

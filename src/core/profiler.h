@@ -87,11 +87,15 @@ namespace Lux
 				g_profiler.endBlock();
 			}
 	};
+	
+#ifdef PC
+#define __PRETTY_FUNCTION__ __FUNCSIG__
+#endif //~PC
 
 
-#define BEGIN_PROFILE_BLOCK(name) Lux::g_profiler.beginBlock(name, __FUNCSIG__)
+#define BEGIN_PROFILE_BLOCK(name) Lux::g_profiler.beginBlock(name, __PRETTY_FUNCTION__)
 #define END_PROFILE_BLOCK() Lux::g_profiler.endBlock()
-#define PROFILE_FUNCTION() Lux::ProfileScope profile_scope(__FUNCTION__, __FUNCSIG__);
-#define PROFILE_BLOCK(name) Lux::ProfileScope profile_scope(name, __FUNCSIG__);
+#define PROFILE_FUNCTION() Lux::ProfileScope profile_scope(__FUNCTION__, __PRETTY_FUNCTION__);
+#define PROFILE_BLOCK(name) Lux::ProfileScope profile_scope(name, __PRETTY_FUNCTION__);
 
 } // namespace Lux

@@ -1,11 +1,23 @@
 #pragma once
+
 #include "core/lux.h"
+
+#ifdef OSX
+#include <pthread.h>
+#endif //~OSX
 
 namespace Lux
 {
 	namespace MT
 	{
+		
+#ifdef PC
 		typedef volatile int32_t SpinMutexHandle;
+#endif //~PC
+		
+#ifdef OSX
+		typedef pthread_mutex_t SpinMutexHandle;
+#endif //~OSX
 
 		class LUX_CORE_API SpinMutex
 		{

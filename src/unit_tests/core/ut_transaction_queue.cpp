@@ -1,8 +1,9 @@
 #include "unit_tests/suite/lux_unit_tests.h"
 
 #include "core/MT/lock_free_fixed_queue.h"
-#include "core/MT/transaction.h"
 #include "core/MT/task.h"
+#include "core/MT/thread.h"
+#include "core/MT/transaction.h"
 
 namespace
 {
@@ -108,7 +109,7 @@ namespace
 		cons2.run();
 		cons3.run();
 		cons4.run();
-
+		
 		TestTaskProducer prod1(&trans_queue, &testItems[0], itemsCount / 4);
 		TestTaskProducer prod2(&trans_queue, &testItems[itemsCount / 4], itemsCount / 4);
 		TestTaskProducer prod3(&trans_queue, &testItems[itemsCount / 2], itemsCount / 4);
@@ -204,7 +205,7 @@ namespace
 
 		LUX_DELETE_ARRAY(testItems);
 
-		Lux::g_log_info.log("unit", "UT_tq_heavy_usage finished ...");
+		Lux::g_log_info.log("unit", "UT_tq_push finished ...");
 	}
 }
 

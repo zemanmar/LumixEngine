@@ -5,8 +5,8 @@
 
 //#include <new>
 #include <stdio.h>
-#include <vadefs.h>
-#include <Windows.h>
+#include <stdarg.h>
+//#include <Windows.h>
 
 #ifdef MEM_TRACK
 

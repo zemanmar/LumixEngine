@@ -1,60 +1,39 @@
-#include "platform/spin_mutex.h"
-#include <pthread.h>
+#include "core/MT/spin_mutex.h"
 
 namespace Lux
 {
 	namespace MT
 	{
-		class OSXMutex : public SpinMutex
+		SpinMutex::SpinMutex(bool locked)
 		{
-		public:
-			virtual void lock() LUX_OVERRIDE;
-			virtual bool poll() LUX_OVERRIDE;
+			m_id = PTHREAD_MUTEX_INITIALIZER;
+			pthread_mutex_init(&m_id, NULL);
 			
-			virtual void unlock() LUX_OVERRIDE;
-			
-			OSXMutex(const char* name, bool locked);
-			~OSXMutex();
-			
-		private:
-			pthread_mutex_t m_id;
-		};
-		
-		SpinMutex* SpinMutex::create(const char* name, bool locked /* = false */)
-		{
-			return new OSXMutex(name, locked);
+			if (locked)
+			{
+				lock();
+			}
 		}
 		
-		void SpinMutex::destroy(SpinMutex* spin_mutex)
+		SpinMutex::~SpinMutex()
 		{
-			delete static_cast<OSXMutex*>(spin_mutex);
+			pthread_mutex_destroy(&m_id);
 		}
 		
-		void OSXMutex::lock()
+		void SpinMutex::lock()
 		{
 			pthread_mutex_lock(&m_id);
 		}
 		
-		bool OSXMutex::poll()
+		bool SpinMutex::poll()
 		{
 			unsigned int res = pthread_mutex_trylock(&m_id);
 			return 0 == res;
 		}
 		
-		void OSXMutex::unlock()
+		void SpinMutex::unlock()
 		{
 			pthread_mutex_unlock(&m_id);
-		}
-		
-		OSXMutex::OSXMutex(const char* name, bool locked)
-		{
-			m_id = PTHREAD_MUTEX_INITIALIZER;
-			pthread_mutex_init(&m_id, LUX_NULL);
-		}
-		
-		OSXMutex::~OSXMutex()
-		{
-			pthread_mutex_destroy(&m_id);
 		}
 	} // ~namespace MT
 } // ~namespace Lux
