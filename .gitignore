@@ -14,3 +14,5 @@ qteditor/qteditor/QtEditor.sln
 qteditor/qteditor/QtEditor.vcxproj.filters
 qteditor/QtEditor/Makefile
 qtEditor/QtEditor/ui_*.h
+/qteditor/QtEditor/debug
+/qteditor/QtEditor/release

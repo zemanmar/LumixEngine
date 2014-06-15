@@ -9,14 +9,13 @@ namespace Lux
 {
 	namespace MT
 	{
-		
-#ifdef PC
+#ifdef WINDOWS_PLATFORM
 		typedef void* MutexHandle;
-#endif
-		
-#ifdef OSX
+#elif OSX_PLATFORM
 		typedef pthread_mutex_t MutexHandle;
-#endif //~OSX
+#else //~OSX_PLATFORM
+#error Unsupported platform!
+#endif 
 		
 		class LUX_CORE_API Mutex
 		{

@@ -1,3 +1,4 @@
+#include "core/lux.h"
 #include "graphics/frame_buffer.h"
 #include "core/vec3.h"
 #include "graphics/gl_ext.h"

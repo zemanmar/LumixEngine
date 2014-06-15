@@ -93,7 +93,7 @@
       </SDLCheck>
       <AdditionalIncludeDirectories>..\..\..\external\physx\include;..\..\..\src;..\..\..\external\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <PreprocessorDefinitions>WIN32;BUILDING_ENGINE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WINDOWS_PLATFORM;BUILDING_ENGINE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <DisableSpecificWarnings>4512</DisableSpecificWarnings>
     </ClCompile>
@@ -111,7 +111,7 @@
       </SDLCheck>
       <AdditionalIncludeDirectories>..\..\..\external\physx\include;..\..\..\src;..\..\..\external\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <PreprocessorDefinitions>WIN32;BUILDING_ENGINE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WINDOWS_PLATFORM;BUILDING_ENGINE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
     </ClCompile>
     <Link>
@@ -130,7 +130,7 @@
       </SDLCheck>
       <AdditionalIncludeDirectories>..\..\..\external\physx\include;..\..\..\src;..\..\..\external\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <PreprocessorDefinitions>WIN32;BUILDING_ENGINE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WINDOWS_PLATFORM;WIN32;BUILDING_ENGINE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -150,7 +150,7 @@
       </SDLCheck>
       <AdditionalIncludeDirectories>..\..\..\external\physx\include;..\..\..\src;..\..\..\external\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <PreprocessorDefinitions>WIN32;BUILDING_ENGINE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WINDOWS_PLATFORM;WIN32;BUILDING_ENGINE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>

@@ -1,7 +1,10 @@
+#include "core/lux.h"
 #include "profilerui.h"
+
+#include "core/profiler.h"
+
 #include "ui_profilerui.h"
 #include <qabstractitemmodel.h>
-#include "core/profiler.h"
 
 
 class ProfileModel : public QAbstractItemModel

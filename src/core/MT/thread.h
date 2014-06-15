@@ -8,13 +8,13 @@ namespace Lux
 {
 	namespace MT
 	{
-#ifdef PC
+#ifdef WINDOWS_PLATFORM
 		typedef uint32_t ThreadID;
-#endif //~PC
-		
-#ifdef OSX
+#elif OSX_PLATFORM
 		typedef uint64_t ThreadID;
-#endif //~OSX
+#else //~OSX_PLATFORM
+#error Unsupported platform!
+#endif 
 		
 		LUX_CORE_API void sleep(uint32_t miliseconds);
 		LUX_CORE_API inline void yield() { sleep(0); }

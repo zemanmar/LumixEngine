@@ -1,9 +1,11 @@
+#include "core/lux.h"
 #include "scriptcompiler.h"
+#include "core/crc32.h"
+#include "core/log.h"
+
 #include <qdiriterator.h>
 #include <qprocess.h>
 #include <qtextstream.h>
-#include "core/crc32.h"
-#include "core/log.h"
 
 
 ScriptCompiler::ScriptCompiler(QObject* parent) :

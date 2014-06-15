@@ -1,7 +1,10 @@
+#include "core/lux.h"
 #include "scriptcompilerwidget.h"
+
 #include "ui_scriptcompilerwidget.h"
-#include <qfilesystemmodel.h>
 #include "scriptcompiler.h"
+
+#include <qfilesystemmodel.h>
 
 
 ScriptCompilerWidget::ScriptCompilerWidget(QWidget* parent) :

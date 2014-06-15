@@ -1,3 +1,4 @@
+#include "core/lux.h"
 #include "graphics/material.h"
 #include "core/fs/file_system.h"
 #include "core/fs/ifile.h"
@@ -17,7 +18,7 @@ namespace Lux
 
 Material::~Material()
 {
-	ASSERT(isEmpty());
+	ASSERT(isEmpty() || isFailure());
 }
 
 void Material::apply(Renderer& renderer, PipelineInstance& pipeline)

@@ -3,7 +3,6 @@
 
 namespace Lux
 {
-
 	class LUX_CORE_API DefaultAllocator
 	{
 		public:

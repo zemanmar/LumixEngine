@@ -1,5 +1,4 @@
-//#define _USE_MATH_DEFINES
-//#include <cmath>
+#include "core/lux.h"
 #include "core/crc32.h"
 #include "core/event_manager.h"
 #include "core/math_utils.h"

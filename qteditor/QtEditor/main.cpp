@@ -1,24 +1,31 @@
+#include "core/lux.h"
 #include "mainwindow.h"
-#include <QApplication>
-#include <qdir.h>
+
 #include "core/log.h"
 #include "core/profiler.h"
 #include "core/resource_manager.h"
 #include "core/resource_manager_base.h"
+
 #include "editor/editor_client.h"
 #include "editor/editor_server.h"
 #include "editor/gizmo.h"
+
 #include "engine/engine.h"
 #include "engine/plugin_manager.h"
+
 #include "graphics/irender_device.h"
 #include "graphics/pipeline.h"
 #include "graphics/renderer.h"
 #include "physics/physics_scene.h"
 #include "physics/physics_system.h"
+
 #include "sceneview.h"
 #include "gameview.h"
 #include "wgl_render_device.h"
 #include "materialmanager.h"
+
+#include <QApplication>
+#include <qdir.h>
 
 class App
 {
@@ -166,10 +173,10 @@ class App
 			HWND hwnds[] = {hwnd, game_hwnd};
 			HGLRC hglrc = createGLContext(hwnds, 2);
 
-			bool server_created = m_server.create(QDir::currentPath().toLocal8Bit().data());
+			bool server_created = m_server.create(QDir::currentPath().toLocal8Bit().data(), m_client);
 			ASSERT(server_created);
 			m_server.tick();
-			bool client_created = m_client.create(m_server.getEngine().getBasePath());
+			bool client_created = m_client.create(m_server.getEngine().getBasePath(), m_server);
 			ASSERT(client_created);
 
 			m_main_window->setEditorClient(m_client);
@@ -220,7 +227,6 @@ class App
 		void handleEvents()
 		{
 			PROFILE_FUNCTION();
-			m_client.processMessages();
 			{
 				PROFILE_BLOCK("qt::processEvents");
 				m_qt_app->processEvents();

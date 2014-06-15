@@ -98,12 +98,12 @@ struct LUX_CORE_API Vec4
 		this->w = w;
 	}
 
-	void set(float x, float y, float z)
+	void set(float x, float y, float z, float w)
 	{
 		this->x = x;
 		this->y = y;
 		this->z = z;
-TODO("		this->w = w;")
+		this->w = w;
 	}
 	
 	inline float length() const

@@ -3,15 +3,15 @@
 
 #include <stdio.h>
 
-#ifdef PC
+#ifdef WINDOWS_PLATFORM
 #include <Windows.h>
-#endif //PC
+#endif //~WINDOWS_PLATFORM
 
 namespace Lux
 {
 	namespace UnitTest
 	{
-#ifdef PC
+#ifdef WINDOWS_PLATFORM
 		void outputToVS(const char* system, const char* message)
 		{
 			char tmp[2048];
@@ -19,7 +19,7 @@ namespace Lux
 
 			OutputDebugString(tmp);
 		}
-#endif //PC
+#endif //~WINDOWS_PLATFORM
 		void outputToConsole(const char* system, const char* message)
 		{
 			printf("%s: %s\n", system, message);
@@ -27,9 +27,11 @@ namespace Lux
 
 		void App::init()
 		{
-//			g_log_info.getCallback().bind<outputToVS>();
-//			g_log_warning.getCallback().bind<outputToVS>();
-//			g_log_error.getCallback().bind<outputToVS>();
+#ifdef WINDOWS_PLATFORM
+			g_log_info.getCallback().bind<outputToVS>();
+			g_log_warning.getCallback().bind<outputToVS>();
+			g_log_error.getCallback().bind<outputToVS>();
+#endif //~WINDOWS_PLATFORM
 
 			g_log_info.getCallback().bind<outputToConsole>();
 			g_log_warning.getCallback().bind<outputToConsole>();

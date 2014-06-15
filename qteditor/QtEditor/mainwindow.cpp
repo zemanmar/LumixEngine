@@ -1,19 +1,22 @@
+#include "core/lux.h"
 #include "mainwindow.h"
-#include "ui_mainwindow.h"
-#include <qfiledialog.h>
-#include <qsettings.h>
-#include "assetbrowser.h"
+
 #include "editor/editor_client.h"
 #include "editor/editor_server.h"
+#include "scripts/scriptcompilerwidget.h"
+
+#include "materialmanager.h"
+#include "profilerui.h"
+#include "ui_mainwindow.h"
 #include "fileserverwidget.h"
 #include "gameview.h"
 #include "log_widget.h"
 #include "property_view.h"
 #include "sceneview.h"
-#include "scripts/scriptcompilerwidget.h"
-#include "materialmanager.h"
-#include "profilerui.h"
+#include "assetbrowser.h"
 
+#include <qfiledialog.h>
+#include <qsettings.h>
 
 MainWindow::MainWindow(QWidget* parent) :
 	QMainWindow(parent),

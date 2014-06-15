@@ -1,7 +1,6 @@
+#include "core/lux.h"
 #include "assetbrowser.h"
 #include "ui_assetbrowser.h"
-#include <qfilesystemmodel.h>
-#include <qlistwidget.h>
 #include "core/crc32.h"
 #include "core/resource.h"
 #include "core/resource_manager.h"
@@ -9,6 +8,10 @@
 #include "editor/editor_server.h"
 #include "engine/engine.h"
 
+#include <qfilesystemmodel.h>
+#include <qlistwidget.h>
+
+TODO("Following include is not realy portaible.");
 #include <Windows.h>
 
 

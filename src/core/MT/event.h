@@ -1,6 +1,6 @@
 #pragma once
 
-#ifdef OSX
+#ifdef OSX_PLATFORM
 #include <pthread.h>
 #endif //~OSX
 
@@ -36,17 +36,17 @@ namespace  Lux
 			bool poll();
 
 		private:
-#ifdef PC
+#ifdef WINDOWS_PLATFORM
 			void* m_id;
-#endif //~PC
+#endif //~WINDOWS_PLATFORM
 			
-#ifdef OSX
+#ifdef OSX_PLATFORM
 			pthread_mutex_t m_mutex;
 			pthread_cond_t m_cond;
 			unsigned int m_waiting_thrads;
 			bool m_manual_reset;
 			bool m_signaled;
-#endif //~OSX
+#endif //~OSX_PLATFORM
 		};
 	}; // ~namespace MT
 }; // ~namespace Lux

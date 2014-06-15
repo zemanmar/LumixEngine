@@ -9,13 +9,13 @@ namespace Lux
 {
 	namespace MT
 	{
-#ifdef PC
+#ifdef WINDOWS_PLATFORM
 		typedef void* SemaphoreHandle;
-#endif //~PC
-
-#ifdef OSX
+#elif OSX_PLATFORM
 		typedef sem_t* SemaphoreHandle;
-#endif //~OSX
+#else //~OSX_PLATFORM
+#error Unsupported platform!
+#endif 
 		
 		class LUX_CORE_API Semaphore
 		{
@@ -30,7 +30,7 @@ namespace Lux
 
 		private:
 			SemaphoreHandle m_id;
-#ifdef OSX
+#ifdef OSX_PLATFORM
 			char name[255];
 #endif //~OSX
 		};
