@@ -88,9 +88,9 @@ namespace Lux
 			}
 	};
 	
-#ifdef PC
+#ifdef WINDOWS_PLATFORM
 #define __PRETTY_FUNCTION__ __FUNCSIG__
-#endif //~PC
+#endif //~WINDOWS_PLATFORM
 
 
 #define BEGIN_PROFILE_BLOCK(name) Lux::g_profiler.beginBlock(name, __PRETTY_FUNCTION__)

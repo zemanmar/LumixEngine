@@ -1,11 +1,12 @@
+#include "core/lux.h"
 #include "physics_mesh_widget.h"
 #include "ui_physics_mesh_widget.h"
-#include <QFileDialog>
 #include "core/crc32.h"
 #include "core/path.h"
 #include "editor/editor_client.h"
 #include "editor/server_message_types.h"
 
+#include <QFileDialog>
 
 PhysicsMeshWidget::PhysicsMeshWidget(QWidget* parent)
 	: PropertyWidgetBase(parent)

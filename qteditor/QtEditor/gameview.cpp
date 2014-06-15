@@ -1,8 +1,14 @@
+#include "core/lux.h"
 #include "gameview.h"
-#include "ui_gameview.h"
-#include <QMouseEvent>
+
 #include "editor/editor_client.h"
+
 #include "graphics/pipeline.h"
+
+#include "ui_gameview.h"
+
+#include <QMouseEvent>
+
 
 GameView::GameView(QWidget* parent) :
 	QDockWidget(parent),

@@ -11,13 +11,13 @@ namespace Lux
 	namespace MT
 	{
 		
-#ifdef PC
+#ifdef WINDOWS_PLATFORM
 		typedef volatile int32_t SpinMutexHandle;
-#endif //~PC
-		
-#ifdef OSX
+#elif OSX_PLATFORM
 		typedef pthread_mutex_t SpinMutexHandle;
-#endif //~OSX
+#else //~OSX_PLATFORM
+#error Unsupported platform!
+#endif 
 
 		class LUX_CORE_API SpinMutex
 		{

@@ -168,7 +168,7 @@ struct PipelineImpl : public Pipeline
 
 	virtual ~PipelineImpl() override
 	{
-		ASSERT(isEmpty());
+		ASSERT(isEmpty() || isFailure());
 	}
 
 

@@ -1,3 +1,4 @@
+#include "core/lux.h"
 #include "core/MT/event.h"
 #include <windows.h>
 #include <cassert>

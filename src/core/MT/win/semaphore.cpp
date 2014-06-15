@@ -1,3 +1,4 @@
+#include "core/lux.h"
 #include "core/MT/semaphore.h"
 #include <Windows.h>
 #include <cassert>

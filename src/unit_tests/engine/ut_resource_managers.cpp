@@ -5,6 +5,8 @@
 #include "core/fs/memory_file_device.h"
 #include "core/fs/disk_file_device.h"
 
+#include "core/MT/thread.h"
+
 #include "core/resource_manager.h"
 #include "core/resource.h"
 

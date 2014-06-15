@@ -1,3 +1,4 @@
+#include "core/lux.h"
 #include "graphics/geometry.h"
 #include "graphics/gl_ext.h"
 #include "graphics/shader.h"

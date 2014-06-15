@@ -1,9 +1,11 @@
+#include "core/lux.h"
 #include "script_widget.h"
 #include "ui_script_widget.h"
-#include <qfiledialog.h>
 #include "core/crc32.h"
 #include "editor/editor_client.h"
 #include "editor/server_message_types.h"
+
+#include <qfiledialog.h>
 
 ScriptWidget::ScriptWidget(QWidget* parent) :
 	PropertyWidgetBase(parent),

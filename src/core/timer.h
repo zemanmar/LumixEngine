@@ -1,13 +1,9 @@
 #pragma once
 
-
 #include "core/lux.h"
-
 
 namespace Lux
 {
-
-
 	class LUX_CORE_API Timer
 	{
 		public:

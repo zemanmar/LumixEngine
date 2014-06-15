@@ -1,5 +1,6 @@
 #include "core/lux.h"
 #include "core/MT/task.h"
+#include "core/MT/thread.h"
 #include <Windows.h>
 
 namespace Lux
@@ -56,6 +57,7 @@ namespace Lux
 		{
 			uint32_t ret = 0xffffFFFF;
 			struct TaskImpl* impl = reinterpret_cast<TaskImpl*>(ptr);
+			SetThreadName(impl->m_thread_id, impl->m_thread_name);
 			if (!impl->m_force_exit)
 			{
 				ret = impl->m_owner->task();
@@ -67,40 +69,49 @@ namespace Lux
 		}
 
 		Task::Task()
+			: m_implementation(NULL)
 		{
-			TaskImpl* impl = LUX_NEW(TaskImpl);
-			impl->m_handle = NULL;
-			impl->m_affinity_mask = getProccessAffinityMask();
-			impl->m_priority = ::GetThreadPriority(GetCurrentThread());
-			impl->m_is_running = false;
-			impl->m_force_exit = false;
-			impl->m_exited = false;
-			impl->m_thread_name = "";
-			impl->m_owner = this;
-
-			m_implementation = impl;
 		}
 
 		Task::~Task()
 		{
-			ASSERT(NULL == m_implementation->m_handle);
-			LUX_DELETE(m_implementation);
+			ASSERT(NULL == m_implementation);
 		}
 
 		bool Task::create(const char* name)
 		{
-			HANDLE handle = CreateThread(NULL, STACK_SIZE, threadFunction, m_implementation, CREATE_SUSPENDED, &m_implementation->m_thread_id);
+			ASSERT(NULL == m_implementation);
+			TaskImpl* impl = LUX_NEW(TaskImpl);
+
+			HANDLE handle = CreateThread(NULL, STACK_SIZE, threadFunction, impl, CREATE_SUSPENDED, &impl->m_thread_id);
 			if (handle)
 			{
-				SetThreadName(m_implementation->m_thread_id, name);
-				m_implementation->m_thread_name = name;
-				m_implementation->m_handle = handle;
+				
+				impl->m_handle = NULL;
+				impl->m_affinity_mask = getProccessAffinityMask();
+				impl->m_priority = ::GetThreadPriority(GetCurrentThread());
+				impl->m_is_running = false;
+				impl->m_force_exit = false;
+				impl->m_exited = false;
+				impl->m_thread_name = "";
+				impl->m_owner = this;
+				impl->m_thread_name = name;
+				impl->m_handle = handle;
+
+				m_implementation = impl;
 			}
+			else
+			{
+				LUX_DELETE(impl);
+			}
+
 			return handle != NULL;
 		}
 
 		bool Task::run()
 		{
+			ASSERT(NULL != m_implementation);
+
 			m_implementation->m_is_running = true;
 			return ::ResumeThread(m_implementation->m_handle) != -1;
 		}
@@ -113,7 +124,9 @@ namespace Lux
 			}
 
 			::CloseHandle(m_implementation->m_handle);
-			m_implementation->m_handle = NULL;
+			LUX_DELETE(m_implementation);
+			m_implementation = NULL;
+
 			return true;
 		}
 
@@ -154,16 +167,17 @@ namespace Lux
 
 		bool Task::isRunning() const
 		{
-			return m_implementation->m_is_running;
+			return m_implementation && m_implementation->m_is_running;
 		}
 
 		bool Task::isFinished() const
 		{
-			return m_implementation->m_exited;
+			return m_implementation && m_implementation->m_exited;
 		}
 
 		bool Task::isForceExit() const
 		{
+			ASSERT(NULL != m_implementation);
 			return m_implementation->m_force_exit;
 		}
 

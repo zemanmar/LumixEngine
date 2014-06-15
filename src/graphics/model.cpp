@@ -20,7 +20,7 @@ namespace Lux
 	
 Model::~Model()
 {
-	ASSERT(isEmpty());
+	ASSERT(isEmpty() || isFailure());
 }
 
 

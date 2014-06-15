@@ -1,3 +1,4 @@
+#include "core/lux.h"
 #include "physics_box_widget.h"
 #include "ui_physics_box_widget.h"
 #include "core/crc32.h"

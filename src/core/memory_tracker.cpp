@@ -6,7 +6,10 @@
 //#include <new>
 #include <stdio.h>
 #include <stdarg.h>
-//#include <Windows.h>
+
+#ifdef WINDOWS_PLATFORM
+#include <Windows.h>
+#endif //~WINDOWS_PLATFORM
 
 #ifdef MEM_TRACK
 
@@ -14,6 +17,8 @@
 
 namespace Lux
 {
+	TODO("Write some log function!")
+#ifdef WINDOWS_PLATFORM
 	void memTrackerLog(const char*, const char* message, ...)
 	{
 		char tmp[1024];
@@ -25,6 +30,19 @@ namespace Lux
 		strcat(tmp, "\n");
 		OutputDebugString(tmp);
 	}
+#else //~WINDOWS_PLATFORM
+	void memTrackerLog(const char*, const char* message, ...)
+	{
+		char tmp[1024];
+		va_list args;
+		va_start(args, message);
+		vsnprintf(tmp, 1021, message, args);
+		va_end(args);
+
+		strcat(tmp, "\n");
+		OutputDebugString(tmp);
+	}
+#endif //~WINDOWS_PLATFORM
 
 	// struct FILE_LINE_REPORT
 	struct FileLineReport

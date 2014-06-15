@@ -1,11 +1,16 @@
+#include "core/lux.h"
 #include "sceneview.h"
+
+#include "core/crc32.h"
+
 #include "editor/editor_client.h"
 #include "editor/editor_server.h"
+
+#include "graphics/pipeline.h"
+
 #include <QDragEnterEvent>
 #include <QMimeData>
 #include <QMouseEvent>
-#include "core/crc32.h"
-#include "graphics/pipeline.h"
 
 SceneView::SceneView(QWidget* parent) :
 	QDockWidget(parent)

@@ -1,10 +1,11 @@
+#include "core/lux.h"
 #include "renderable_widget.h"
 #include "ui_renderable_widget.h"
-#include <QFileDialog>
 #include "core/crc32.h"
 #include "editor/editor_client.h"
 #include "editor/server_message_types.h"
 
+#include <QFileDialog>
 
 RenderableWidget::RenderableWidget(QWidget* parent) 
 	: PropertyWidgetBase(parent)

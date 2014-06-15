@@ -1,21 +1,18 @@
+#include "core/lux.h"
 #include "materialmanager.h"
-#include "ui_materialmanager.h"
-#include <qboxlayout.h>
-#include <qcheckbox.h>
-#include <qfilesystemmodel.h>
-#include <qformlayout.h>
-#include <qlineedit.h>
-#include <qpainter.h>
-#include <qpushbutton.h>
+
 #include "core/crc32.h"
 #include "core/FS/file_system.h"
 #include "core/json_serializer.h"
 #include "core/log.h"
 #include "core/profiler.h"
+
 #include "editor/editor_server.h"
 #include "editor/editor_client.h"
 #include "editor/server_message_types.h"
+
 #include "engine/engine.h"
+
 #include "graphics/material.h"
 #include "graphics/model.h"
 #include "graphics/pipeline.h"
@@ -23,8 +20,19 @@
 #include "graphics/render_scene.h"
 #include "graphics/shader.h"
 #include "graphics/texture.h"
+
 #include "universe/universe.h"
+
+#include "ui_materialmanager.h"
 #include "wgl_render_device.h"
+
+#include <qboxlayout.h>
+#include <qcheckbox.h>
+#include <qfilesystemmodel.h>
+#include <qformlayout.h>
+#include <qlineedit.h>
+#include <qpainter.h>
+#include <qpushbutton.h>
 
 
 class MaterialManagerUI

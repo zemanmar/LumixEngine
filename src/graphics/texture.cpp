@@ -408,7 +408,7 @@ Texture::Texture(const Path& path, ResourceManager& resource_manager)
 
 Texture::~Texture()
 {
-	ASSERT(isEmpty());
+	ASSERT(isEmpty() || isFailure());
 }
 
 bool Texture::create(int w, int h)

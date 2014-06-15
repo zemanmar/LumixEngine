@@ -1,24 +1,31 @@
+#include "core/lux.h"
 #include "mainwindow.h"
-#include <QApplication>
-#include <qdir.h>
+
 #include "core/log.h"
 #include "core/profiler.h"
 #include "core/resource_manager.h"
 #include "core/resource_manager_base.h"
+
 #include "editor/editor_client.h"
 #include "editor/editor_server.h"
 #include "editor/gizmo.h"
+
 #include "engine/engine.h"
 #include "engine/plugin_manager.h"
+
 #include "graphics/irender_device.h"
 #include "graphics/pipeline.h"
 #include "graphics/renderer.h"
 #include "physics/physics_scene.h"
 #include "physics/physics_system.h"
+
 #include "sceneview.h"
 #include "gameview.h"
 #include "wgl_render_device.h"
 #include "materialmanager.h"
+
+#include <QApplication>
+#include <qdir.h>
 
 class App
 {

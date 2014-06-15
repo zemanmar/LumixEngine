@@ -1,3 +1,4 @@
+#include "core/lux.h"
 #include "server_message_types.h"
 #include "core/blob.h"
 

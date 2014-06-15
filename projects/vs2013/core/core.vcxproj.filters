@@ -125,6 +125,12 @@
       <Filter>MT</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\src\core\profiler.h" />
+    <ClInclude Include="..\..\..\src\core\OSX\platform.h">
+      <Filter>OSX</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\core\WIN\platform.h">
+      <Filter>WIN</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\src\core\blob.cpp" />
@@ -140,8 +146,6 @@
     <ClCompile Include="..\..\..\src\core\new_macros.cpp" />
     <ClCompile Include="..\..\..\src\core\os_file.cpp" />
     <ClCompile Include="..\..\..\src\core\quat.cpp" />
-    <ClCompile Include="..\..\..\src\core\timer.cpp" />
-    <ClCompile Include="..\..\..\src\core\pc\input_system.cpp" />
     <ClCompile Include="..\..\..\src\core\resource_manager.cpp" />
     <ClCompile Include="..\..\..\src\core\resource_manager_base.cpp" />
     <ClCompile Include="..\..\..\src\core\path.cpp" />
@@ -164,24 +168,6 @@
     </ClCompile>
     <ClCompile Include="..\..\..\src\core\FS\tcp_file_server.cpp">
       <Filter>FS</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\core\MT\pc\atomic.cpp">
-      <Filter>MT</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\core\MT\pc\event.cpp">
-      <Filter>MT</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\core\MT\pc\mutex.cpp">
-      <Filter>MT</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\core\MT\pc\semaphore.cpp">
-      <Filter>MT</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\core\MT\pc\spin_mutex.cpp">
-      <Filter>MT</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\core\MT\pc\task.cpp">
-      <Filter>MT</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\src\core\MTJD\base_entry.cpp">
       <Filter>MTJD</Filter>
@@ -211,6 +197,57 @@
       <Filter>Net</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\src\core\profiler.cpp" />
+    <ClCompile Include="..\..\..\src\core\OSX\input_system.cpp">
+      <Filter>OSX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\core\OSX\timer.cpp">
+      <Filter>OSX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\core\WIN\input_system.cpp">
+      <Filter>WIN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\core\WIN\timer.cpp">
+      <Filter>WIN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\core\MT\osx\atomic.cpp">
+      <Filter>MT\OSX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\core\MT\win\atomic.cpp">
+      <Filter>MT\WIN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\core\MT\osx\event.cpp">
+      <Filter>MT\OSX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\core\MT\win\event.cpp">
+      <Filter>MT\WIN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\core\MT\osx\mutex.cpp">
+      <Filter>MT\OSX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\core\MT\win\mutex.cpp">
+      <Filter>MT\WIN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\core\MT\osx\semaphore.cpp">
+      <Filter>MT\OSX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\core\MT\win\semaphore.cpp">
+      <Filter>MT\WIN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\core\MT\osx\spin_mutex.cpp">
+      <Filter>MT\OSX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\core\MT\win\spin_mutex.cpp">
+      <Filter>MT\WIN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\core\MT\osx\task.cpp">
+      <Filter>MT\OSX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\core\MT\win\task.cpp">
+      <Filter>MT\WIN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\core\MT\osx\thread.cpp">
+      <Filter>MT\OSX</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="FS">
@@ -224,6 +261,18 @@
     </Filter>
     <Filter Include="MTJD">
       <UniqueIdentifier>{ce2d1d5a-45d2-4b29-a646-769605372872}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OSX">
+      <UniqueIdentifier>{ec63959c-314b-48bf-8df3-b92b2e0ea887}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WIN">
+      <UniqueIdentifier>{ce0b40ee-73e8-46bc-92ed-08c70626036b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MT\WIN">
+      <UniqueIdentifier>{a31289c3-8391-4767-9d6d-2333fe9fcde8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MT\OSX">
+      <UniqueIdentifier>{b89bdeaa-848d-4d52-9b29-cc4fec38d6c5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -1,6 +1,9 @@
+#include "core/lux.h"
 #include "log_widget.h"
-#include "ui_logwidget.h"
+
 #include "core/log.h"
+
+#include "ui_logwidget.h"
 
 
 LogWidget::LogWidget(QWidget* parent) :

@@ -1,7 +1,9 @@
+#include "core/lux.h"
 #include "editor/script_compiler.h"
-#include <cstdio>
 #include "core/crc32.h"
 #include "core/log.h"
+
+#include <cstdio>
 
 
 void ScriptCompiler::compileAll()

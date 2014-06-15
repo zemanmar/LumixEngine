@@ -1,10 +1,12 @@
+#include "core/lux.h"
 #include "property_view.h"
-#include "ui_property_view.h"
-#include <qpushbutton.h>
+
 #include "core/crc32.h"
 #include "core/event_manager.h"
+
 #include "editor/editor_client.h"
 #include "editor/server_message_types.h"
+
 #include "propertywidgets/animable_widget.h"
 #include "propertywidgets/camerawidget.h"
 #include "propertywidgets/lightwidget.h"
@@ -14,6 +16,8 @@
 #include "propertywidgets/renderable_widget.h"
 #include "propertywidgets/script_widget.h"
 
+#include "ui_property_view.h"
+#include <qpushbutton.h>
 
 PropertyView::PropertyView(QWidget* parent) :
 	QDockWidget(parent),

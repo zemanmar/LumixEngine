@@ -1,3 +1,4 @@
+#include "core/lux.h"
 #include "camerawidget.h"
 #include "ui_camerawidget.h"
 #include "core/crc32.h"

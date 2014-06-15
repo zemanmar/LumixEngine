@@ -57,12 +57,12 @@ namespace Lux
 			{
 				return read(&val, sizeof(val));
 			}
-
+#ifdef 64_PLATFORM
 			LUX_FORCE_INLINE bool read(size_t& val)
 			{
 				return read(&val, sizeof(val));
 			}
-			
+#endif //~_PLATFORM
 			LUX_FORCE_INLINE bool write(bool val)
 			{
 				return write(&val, sizeof(val));
@@ -107,12 +107,12 @@ namespace Lux
 			{
 				return write(&val, sizeof(val));
 			}
-
+#ifdef _PLATFORM
 			LUX_FORCE_INLINE bool write(size_t val)
 			{
 				return write(&val, sizeof(val));
 			}
-			
+#endif //~_PLATFORM			
 			bool readString(char* string, uint32_t max_size);
 			bool writeString(const char* string);
 
