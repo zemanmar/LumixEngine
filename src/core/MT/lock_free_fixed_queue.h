@@ -147,7 +147,7 @@ namespace Lux
 			}
 
 
-			inline bool isAborted() const
+			bool isAborted() const
 			{
 				return m_aborted;
 			}

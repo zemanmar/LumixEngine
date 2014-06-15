@@ -76,8 +76,8 @@ namespace Lux
 		bool OsFile::read(void* data, size_t size)
 		{
 			ASSERT(NULL != m_impl);
-			size_t readed = ::fread(data, 1, size, m_impl->m_file);
-			return size == readed;
+			size_t read = ::fread(data, 1, size, m_impl->m_file);
+			return size == read;
 		}
 
 		size_t OsFile::size()
