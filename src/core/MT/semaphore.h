@@ -1,7 +1,7 @@
 #pragma once
 #include "core/lux.h"
 
-#ifdef OSX
+#ifdef OSX_PLATFORM
 #include <semaphore.h>
 #endif //~OSX
 

@@ -46,6 +46,17 @@ void* operator new[] (size_t size, size_t alignment, const char* file, int line)
 	return Lux::dll_lux_new_aligned(size, alignment, file, line); 
 }
 
+#ifdef OSX_PLATFORM
+void operator delete (void* p) _NOEXCEPT
+{
+	Lux::dll_lux_delete(p);
+}
+
+void operator delete[] (void* p) _NOEXCEPT
+{
+	Lux::dll_lux_delete(p);
+}
+#else //~OSX_PLATFORM
 void operator delete (void* p)
 { 
 	Lux::dll_lux_delete(p); 
@@ -55,7 +66,7 @@ void operator delete[] (void* p)
 { 
 	Lux::dll_lux_delete(p); 
 }
-
+#endif //~OSX_PLATFORM
 void operator delete (void* p, size_t)
 { 
 	Lux::dll_lux_delete_aligned(p); 

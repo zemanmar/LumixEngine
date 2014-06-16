@@ -33,7 +33,7 @@ namespace Lux
 		
 		void Semaphore::wait()
 		{
-			int ret = ::sem_wait(m_id);
+			::sem_wait(m_id);
 		}
 		
 		bool Semaphore::poll()

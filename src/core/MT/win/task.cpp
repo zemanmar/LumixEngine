@@ -1,6 +1,6 @@
 #include "core/lux.h"
-#include "core/MT/task.h"
-#include "core/MT/thread.h"
+#include "core/mt/task.h"
+#include "core/mt/thread.h"
 #include <Windows.h>
 
 namespace Lux

@@ -1,11 +1,5 @@
 #pragma once
 
-#include "core/lux.h"
-
-#ifdef OSX
-#include <pthread.h>
-#endif //~OSX
-
 namespace Lux
 {
 	namespace MT

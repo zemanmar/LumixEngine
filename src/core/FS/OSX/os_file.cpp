@@ -1,5 +1,5 @@
-#include "core/os_file.h"
 #include "core/lux.h"
+#include "core/fs/os_file.h"
 
 #include <assert.h>
 #include <stdio.h>
@@ -86,7 +86,7 @@ namespace Lux
 			fpos_t pos;
 			fgetpos(m_impl->m_file, &pos);
 			fseek(m_impl->m_file, 0, SEEK_END);
-			uint32_t size = ftell(m_impl->m_file);
+			size_t size = ftell(m_impl->m_file);
 			fsetpos(m_impl->m_file, &pos);
 			
 			return size;

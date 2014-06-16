@@ -1,6 +1,7 @@
 #include "core/lux.h"
-#include "core/MT/thread.h"
+#include "core/mt/thread.h"
 
+#include <pthread.h>
 #include <unistd.h>
 
 namespace Lux

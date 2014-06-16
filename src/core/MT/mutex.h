@@ -1,9 +1,9 @@
 #pragma once
 #include "core/lux.h"
 
-#ifdef OSX
+#ifdef OSX_PLATFORM
 #include <pthread.h>
-#endif //~OSX
+#endif //~OSX_PLATFORM
 
 namespace Lux
 {

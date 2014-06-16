@@ -43,7 +43,7 @@ namespace Lux
 	{
 		static uint32_t get(const int32_t& key)
 		{
-			size_t x = ((key >> 16) ^ key) * 0x45d9f3b;
+			uint32_t x = ((key >> 16) ^ key) * 0x45d9f3b;
 			x = ((x >> 16) ^ x) * 0x45d9f3b;
 			x = ((x >> 16) ^ x);
 			return x;
@@ -79,7 +79,7 @@ namespace Lux
 	{
 		static uint32_t get(const char* key)
 		{
-			size_t result = 0x55555555;
+			uint32_t result = 0x55555555;
 
 			while (*key) 
 			{ 

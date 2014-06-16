@@ -9,8 +9,9 @@
 #define JOIN_STRINGS(A, B) JOIN_STRINGS_2(A, B)
 
 #ifdef WINDOWS_PLATFORM
-#include "core/WIN/platform.h"
+#include "core/win/platform.h"
 #elif OSX_PLATFORM
+#include "core/osx/platform.h"
 #else
 #error Unsupported platform!
 #endif

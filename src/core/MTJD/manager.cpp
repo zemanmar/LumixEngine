@@ -195,7 +195,7 @@ namespace Lux
 #if defined(_WIN32) || defined(_WIN64)
 			idx = 0;
 			return MT::getProccessAffinityMask();
-#elif defined(OSX)
+#elif defined(OSX_PLATFORM)
 			return MT::getProccessAffinityMask();
 #else
 #error "Not Supported!"

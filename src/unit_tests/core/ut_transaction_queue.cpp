@@ -9,9 +9,9 @@ namespace
 {
 	struct Test
 	{
-		uint32_t idx;
+		int32_t idx;
 		int32_t proc_count;
-		uint32_t thread_id;
+		Lux::MT::ThreadID thread_id;
 	};
 
 	typedef Lux::MT::Transaction<Test> AsynTrans;
@@ -65,7 +65,7 @@ namespace
 
 		int task()
 		{
-			for (size_t i = 0; i < m_size; i++)
+			for (int32_t i = 0; i < m_size; i++)
 			{
 				AsynTrans* tr = m_trans_queue->alloc(true);
 				tr->data.idx = m_array[i].idx;
@@ -86,7 +86,7 @@ namespace
 	{
 		const size_t itemsCount = 1200000;
 		Test* testItems = LUX_NEW_ARRAY(Test, itemsCount);
-		for (size_t i = 0; i < itemsCount; i++)
+		for (int32_t i = 0; i < itemsCount; i++)
 		{
 			testItems[i].idx = i;
 			testItems[i].proc_count = 0;
@@ -166,7 +166,7 @@ namespace
 	{
 		const size_t itemsCount = 1200000;
 		Test* testItems = LUX_NEW_ARRAY(Test, itemsCount);
-		for (size_t i = 0; i < itemsCount; i++)
+		for (int32_t i = 0; i < itemsCount; i++)
 		{
 			testItems[i].idx = i;
 			testItems[i].proc_count = 0;
