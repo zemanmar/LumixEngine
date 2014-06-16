@@ -13,102 +13,102 @@ namespace Lux
 			TCPStream(uintptr_t socket) : m_socket(socket) { } 
 			~TCPStream();
 
-			LUX_FORCE_INLINE bool read(bool& val)
+			inline bool read(bool& val)
 			{
 				return read(&val, sizeof(val));
 			}
 
-			LUX_FORCE_INLINE bool read(uint8_t& val)
+			inline bool read(uint8_t& val)
 			{
 				return read(&val, sizeof(val));
 			}
 
-			LUX_FORCE_INLINE bool read(int8_t& val)
+			inline bool read(int8_t& val)
 			{
 				return read(&val, sizeof(val));
 			}
 
-			LUX_FORCE_INLINE bool read(uint16_t& val)
+			inline bool read(uint16_t& val)
 			{
 				return read(&val, sizeof(val));
 			}
 
-			LUX_FORCE_INLINE bool read(int16_t& val)
+			inline bool read(int16_t& val)
 			{
 				return read(&val, sizeof(val));
 			}
 
-			LUX_FORCE_INLINE bool read(uint32_t& val)
+			inline bool read(uint32_t& val)
 			{
 				return read(&val, sizeof(val));
 			}
 
-			LUX_FORCE_INLINE bool read(int32_t& val)
+			inline bool read(int32_t& val)
 			{
 				return read(&val, sizeof(val));
 			}
 
-			LUX_FORCE_INLINE bool read(uint64_t& val)
+			inline bool read(uint64_t& val)
 			{
 				return read(&val, sizeof(val));
 			}
 
-			LUX_FORCE_INLINE bool read(int64_t& val)
+			inline bool read(int64_t& val)
 			{
 				return read(&val, sizeof(val));
 			}
 #ifdef PLATFORM_64
-			LUX_FORCE_INLINE bool read(size_t& val)
+			inline bool read(size_t& val)
 			{
 				return read(&val, sizeof(val));
 			}
 #endif //~PLATFORM_64
-			LUX_FORCE_INLINE bool write(bool val)
+			inline bool write(bool val)
 			{
 				return write(&val, sizeof(val));
 			}
 
-			LUX_FORCE_INLINE bool write(uint8_t val)
+			inline bool write(uint8_t val)
 			{
 				return write(&val, sizeof(val));
 			}
 
-			LUX_FORCE_INLINE bool write(int8_t val)
+			inline bool write(int8_t val)
 			{
 				return write(&val, sizeof(val));
 			}
 
-			LUX_FORCE_INLINE bool write(uint16_t val)
+			inline bool write(uint16_t val)
 			{
 				return write(&val, sizeof(val));
 			}
 
-			LUX_FORCE_INLINE bool write(int16_t val)
+			inline bool write(int16_t val)
 			{
 				return write(&val, sizeof(val));
 			}
 
-			LUX_FORCE_INLINE bool write(uint32_t val)
+			inline bool write(uint32_t val)
 			{
 				return write(&val, sizeof(val));
 			}
 
-			LUX_FORCE_INLINE bool write(int32_t val)
+			inline bool write(int32_t val)
 			{
 				return write(&val, sizeof(val));
 			}
 
-			LUX_FORCE_INLINE bool write(uint64_t val)
+			inline bool write(uint64_t val)
 			{
 				return write(&val, sizeof(val));
 			}
 
-			LUX_FORCE_INLINE bool write(int64_t val)
+			inline bool write(int64_t val)
 			{
 				return write(&val, sizeof(val));
 			}
 #ifdef PLATFORM_64
-			LUX_FORCE_INLINE bool write(size_t val)
+			inline bool write(size_t val)
 			{
 				return write(&val, sizeof(val));
 			}

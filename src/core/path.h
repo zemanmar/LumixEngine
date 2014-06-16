@@ -7,7 +7,7 @@ namespace Lux
 	class LUX_CORE_API Path
 	{
 	public:
-		LUX_FORCE_INLINE Path()
+		inline Path()
 			: m_id(0)
 		{
 			m_path[0] = '\0';

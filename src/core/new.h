@@ -25,12 +25,12 @@ void operator delete[]	(void* p, size_t alignment, const char* file, int line);
 #ifdef PC
 #ifndef __PLACEMENT_NEW_INLINE
 #define __PLACEMENT_NEW_INLINE
-LUX_FORCE_INLINE void* operator new(size_t, void *ptr) { return (ptr); }
-LUX_FORCE_INLINE void  operator delete(void *, void *) { return; }
+inline void* operator new(size_t, void *ptr) { return (ptr); }
+inline void  operator delete(void *, void *) { return; }
 #endif //~__PLACEMENT_NEW_INLINE
 #endif //~PC
 
 #ifdef _OSX
-LUX_FORCE_INLINE void* operator new(size_t, void *ptr) { return (ptr); }
-LUX_FORCE_INLINE void  operator delete(void *, void *) { return; }
+inline void* operator new(size_t, void *ptr) { return (ptr); }
+inline void  operator delete(void *, void *) { return; }
 #endif //~OSX

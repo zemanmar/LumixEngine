@@ -23,31 +23,31 @@ namespace Lux
 		LUX_CORE_API bool getRaySphereIntersection(const Vec3& point, float radius, const Vec3& origin, const Vec3& dir, Vec3& out);
 
 		template <typename T>
-		LUX_FORCE_INLINE T min(T a, T b)
+		inline T min(T a, T b)
 		{
 			return a < b ? a : b;
 		}
 
 		template <typename T>
-		LUX_FORCE_INLINE T max(T a, T b)
+		inline T max(T a, T b)
 		{
 			return a < b ? b : a;
 		}
 
 		template <typename T>
-		LUX_FORCE_INLINE T maxValue(T a, T b)
+		inline T maxValue(T a, T b)
 		{
 			return a < b ? b : a;
 		}
 
 		template <typename T>
-		LUX_FORCE_INLINE T abs(T a)
+		inline T abs(T a)
 		{
 			return a > 0 ? a : -a;
 		}
 
 		template <typename T>
-		LUX_FORCE_INLINE T clamp(T value, T min_value, T max_value)
+		inline T clamp(T value, T min_value, T max_value)
 		{
 			return min(max(value, min_value), max_value);
 		}
@@ -58,7 +58,7 @@ namespace Lux
 			return (n) && !(n & (n - 1));
 		}
 
-		LUX_FORCE_INLINE float degreesToRadians(float angle)
+		inline float degreesToRadians(float angle)
 		{
 			 return angle * PI / 180.0f;
 		}

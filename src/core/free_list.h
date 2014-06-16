@@ -24,7 +24,7 @@ namespace Lux
 			LUX_DELETE_ARRAY(m_heap);
 		}
 
-		LUX_FORCE_INLINE T* alloc(void)
+		inline T* alloc(void)
 		{
 			T* p = NULL;
 			if (m_pool_index > 0)
@@ -36,7 +36,7 @@ namespace Lux
 		}
 
 		template<typename P1>
-		LUX_FORCE_INLINE T* alloc(P1 p1)
+		inline T* alloc(P1 p1)
 		{
 			T* p = NULL;
 			if (m_pool_index > 0)
@@ -48,7 +48,7 @@ namespace Lux
 		}
 
 		template<typename P1, typename P2>
-		LUX_FORCE_INLINE T* alloc(P1 p1, P2 p2)
+		inline T* alloc(P1 p1, P2 p2)
 		{
 			T* p = NULL;
 			if (m_pool_index > 0)
@@ -60,7 +60,7 @@ namespace Lux
 		}
 
 		template<typename P1, typename P2, typename P3>
-		LUX_FORCE_INLINE T* alloc(P1 p1, P2 p2, P3 p3)
+		inline T* alloc(P1 p1, P2 p2, P3 p3)
 		{
 			T* p = NULL;
 			if (m_pool_index > 0)
@@ -71,7 +71,7 @@ namespace Lux
 			return p;
 		}
 
-		LUX_FORCE_INLINE void release(T* p)
+		inline void release(T* p)
 		{
 			ASSERT (((uintptr_t)p >= (uintptr_t)&m_heap[0]) && ((uintptr_t)p < (uintptr_t)&m_heap[chunk_size]));
 			p->~T();
@@ -98,12 +98,12 @@ namespace Lux
 			}
 		}
 
-		LUX_FORCE_INLINE int32_t alloc(void)
+		inline int32_t alloc(void)
 		{
 			return m_pool_index > 0 ? m_pool[--m_pool_index] : (-1);
 		}
 
-		LUX_FORCE_INLINE void release(int32_t id)
+		inline void release(int32_t id)
 		{
 			ASSERT (id >= 0 && id < chunk_size);
 			m_pool[m_pool_index++] = id;

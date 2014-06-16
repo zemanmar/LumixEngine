@@ -196,7 +196,7 @@ namespace DDS
 		uint8_t row[6];
 	};
 
-	static LUX_FORCE_INLINE void swapMemory(void* mem1, void* mem2, size_t size)
+	static inline void swapMemory(void* mem1, void* mem2, size_t size)
 	{
 		if(size < 2048)
 		{

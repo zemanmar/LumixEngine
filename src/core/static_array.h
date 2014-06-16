@@ -23,12 +23,12 @@ namespace Lux
 			}
 		}
 
-		LUX_FORCE_INLINE size_type size() const 
+		inline size_type size() const 
 		{
 			return Size;
 		}
 
-		LUX_FORCE_INLINE size_type maxSize() const 
+		inline size_type maxSize() const 
 		{
 			return Size;
 		}

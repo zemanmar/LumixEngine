@@ -11,9 +11,6 @@
 #define WARN(msg) \
 	_Pragma(STR(clang warning(msg " at line " DEFER(STR, __LINE__))))
 
-#define LUX_INLINE inline
-#define LUX_FORCE_INLINE inline
-
 #ifdef BUILDING_CORE
 #define LUX_CORE_API
 #else
@@ -47,6 +44,7 @@
 #define LUX_GUI_API
 #endif
 
+TODO("sscanf_s")
 inline int sscanf_s(const char * __restrict s1, const char * __restrict s2, ...)
 {
 	return 0;

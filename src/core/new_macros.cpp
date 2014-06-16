@@ -18,7 +18,7 @@ namespace Lux
 	void removePtr(void* ptr) {}
 #endif
 
-	LUX_FORCE_INLINE void* lux_new(size_t size, const char* file, int32_t line)
+	inline void* lux_new(size_t size, const char* file, int32_t line)
 	{
 		if(!size)size = 1;
 
@@ -27,16 +27,22 @@ namespace Lux
 		return p;
 	}
 
-	LUX_FORCE_INLINE void* lux_new_aligned(size_t size, size_t alignment, const char* file, int32_t line)
+	inline void* lux_new_aligned(size_t size, size_t alignment, const char* file, int32_t line)
 	{
 		if(!size)size = 1;
-//		void* p = _aligned_malloc(size, alignment);
-//		storePtr(p, size, file, line);
-//		return p;
-		return NULL;
+#ifdef OSX_VERSION
+		void* p = _aligned_malloc(size, alignment);
+#else //~OSX_VERSION
+		//OSX allocator returns memmory aligned to 16B by default.
+		ASSERT(alignment <= 16);
+		void* p = malloc(size);
+#endif //~OSX_VERSION
+		
+		storePtr(p, size, file, line);
+		return p;
 	}
 	
-	LUX_FORCE_INLINE void* lux_realloc(void* ptr, size_t size, const char* file, int32_t line)
+	inline void* lux_realloc(void* ptr, size_t size, const char* file, int32_t line)
 	{
 		if(NULL == ptr && 0 < size)
 		{
@@ -67,7 +73,7 @@ namespace Lux
 		return NULL;
 	}
 	
-	LUX_FORCE_INLINE void lux_delete(void* ptr)
+	inline void lux_delete(void* ptr)
 	{
 		if(!ptr)return;
 
@@ -75,7 +81,7 @@ namespace Lux
 		free(ptr);
 	}
 
-	LUX_FORCE_INLINE void lux_delete_aligned(void* ptr)
+	inline void lux_delete_aligned(void* ptr)
 	{
 		if(!ptr)return;
 

@@ -50,10 +50,10 @@ namespace Lux
 		const char *file;
 		int32_t line;
 
-		LUX_FORCE_INLINE bool operator == (const FileLineReport &other) const { return file == other.file && line == other.line; }
-		LUX_FORCE_INLINE bool operator != (const FileLineReport &other) const { return !(*this == other); }
+		inline bool operator == (const FileLineReport &other) const { return file == other.file && line == other.line; }
+		inline bool operator != (const FileLineReport &other) const { return !(*this == other); }
 
-		LUX_FORCE_INLINE bool operator < (const FileLineReport &other) const
+		inline bool operator < (const FileLineReport &other) const
 		{
 			if(file == NULL)
 				return other.file != NULL;
@@ -65,7 +65,7 @@ namespace Lux
 			return line < other.line;
 		}
 
-		LUX_FORCE_INLINE bool operator > (const FileLineReport &other) const
+		inline bool operator > (const FileLineReport &other) const
 		{
 			if(file == NULL)
 				return other.file != NULL;
