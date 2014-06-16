@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EF102D941942440C00F22450 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102D911942440C00F22450 /* main.cpp */; };
-		EF102F411947540300F22450 /* unit_test_app.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102EB21947540300F22450 /* unit_test_app.cpp */; };
-		EF102F421947540300F22450 /* unit_test_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102EB41947540300F22450 /* unit_test_manager.cpp */; };
-		EF102F441947540300F22450 /* ut_file_system.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102EB91947540300F22450 /* ut_file_system.cpp */; };
-		EF102F451947540300F22450 /* ut_hash_map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102EBA1947540300F22450 /* ut_hash_map.cpp */; };
-		EF102F461947540300F22450 /* ut_mtjd_framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102EBB1947540300F22450 /* ut_mtjd_framework.cpp */; };
-		EF102F471947540300F22450 /* ut_path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102EBC1947540300F22450 /* ut_path.cpp */; };
-		EF102F481947540300F22450 /* ut_quat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102EBD1947540300F22450 /* ut_quat.cpp */; };
-		EF102F491947540300F22450 /* ut_transaction_queue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF102EBE1947540300F22450 /* ut_transaction_queue.cpp */; };
 		EF102FA21949F43100F22450 /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EF102DA9194244B100F22450 /* libcore.dylib */; };
+		EFA292E7194F77370054C049 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFA292E6194F77370054C049 /* main.cpp */; };
+		EFA292F9194F775E0054C049 /* ut_file_system.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFA292E9194F775E0054C049 /* ut_file_system.cpp */; };
+		EFA292FA194F775E0054C049 /* ut_hash_map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFA292EA194F775E0054C049 /* ut_hash_map.cpp */; };
+		EFA292FB194F775E0054C049 /* ut_mtjd_framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFA292EB194F775E0054C049 /* ut_mtjd_framework.cpp */; };
+		EFA292FC194F775E0054C049 /* ut_path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFA292EC194F775E0054C049 /* ut_path.cpp */; };
+		EFA292FD194F775E0054C049 /* ut_quat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFA292ED194F775E0054C049 /* ut_quat.cpp */; };
+		EFA292FE194F775E0054C049 /* ut_transaction_queue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFA292EE194F775E0054C049 /* ut_transaction_queue.cpp */; };
+		EFA29300194F775E0054C049 /* unit_test_app.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFA292F5194F775E0054C049 /* unit_test_app.cpp */; };
+		EFA29301194F775E0054C049 /* unit_test_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFA292F7194F775E0054C049 /* unit_test_manager.cpp */; };
 		EFDCA7FE194F48E600101559 /* array.h in Headers */ = {isa = PBXBuildFile; fileRef = EFDCA771194F48E600101559 /* array.h */; };
 		EFDCA7FF194F48E600101559 /* blob.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFDCA772194F48E600101559 /* blob.cpp */; };
 		EFDCA800194F48E600101559 /* blob.h in Headers */ = {isa = PBXBuildFile; fileRef = EFDCA773194F48E600101559 /* blob.h */; };
@@ -158,22 +158,22 @@
 
 /* Begin PBXFileReference section */
 		EF102D86194243DF00F22450 /* unit_tests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = unit_tests; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF102D911942440C00F22450 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../../../../src/unit_tests/main.cpp; sourceTree = "<group>"; };
 		EF102DA9194244B100F22450 /* libcore.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libcore.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF102EAF1947540300F22450 /* lux_unit_tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lux_unit_tests.h; sourceTree = "<group>"; };
-		EF102EB01947540300F22450 /* platform_defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = platform_defines.h; sourceTree = "<group>"; };
-		EF102EB11947540300F22450 /* unit_test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unit_test.h; sourceTree = "<group>"; };
-		EF102EB21947540300F22450 /* unit_test_app.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = unit_test_app.cpp; sourceTree = "<group>"; };
-		EF102EB31947540300F22450 /* unit_test_app.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unit_test_app.h; sourceTree = "<group>"; };
-		EF102EB41947540300F22450 /* unit_test_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = unit_test_manager.cpp; sourceTree = "<group>"; };
-		EF102EB51947540300F22450 /* unit_test_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unit_test_manager.h; sourceTree = "<group>"; };
-		EF102EB71947540300F22450 /* ut_resource_managers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ut_resource_managers.cpp; sourceTree = "<group>"; };
-		EF102EB91947540300F22450 /* ut_file_system.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ut_file_system.cpp; sourceTree = "<group>"; };
-		EF102EBA1947540300F22450 /* ut_hash_map.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ut_hash_map.cpp; sourceTree = "<group>"; };
-		EF102EBB1947540300F22450 /* ut_mtjd_framework.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ut_mtjd_framework.cpp; sourceTree = "<group>"; };
-		EF102EBC1947540300F22450 /* ut_path.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ut_path.cpp; sourceTree = "<group>"; };
-		EF102EBD1947540300F22450 /* ut_quat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ut_quat.cpp; sourceTree = "<group>"; };
-		EF102EBE1947540300F22450 /* ut_transaction_queue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ut_transaction_queue.cpp; sourceTree = "<group>"; };
+		EFA292E6194F77370054C049 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		EFA292E9194F775E0054C049 /* ut_file_system.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ut_file_system.cpp; sourceTree = "<group>"; };
+		EFA292EA194F775E0054C049 /* ut_hash_map.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ut_hash_map.cpp; sourceTree = "<group>"; };
+		EFA292EB194F775E0054C049 /* ut_mtjd_framework.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ut_mtjd_framework.cpp; sourceTree = "<group>"; };
+		EFA292EC194F775E0054C049 /* ut_path.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ut_path.cpp; sourceTree = "<group>"; };
+		EFA292ED194F775E0054C049 /* ut_quat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ut_quat.cpp; sourceTree = "<group>"; };
+		EFA292EE194F775E0054C049 /* ut_transaction_queue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ut_transaction_queue.cpp; sourceTree = "<group>"; };
+		EFA292F0194F775E0054C049 /* ut_resource_managers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ut_resource_managers.cpp; sourceTree = "<group>"; };
+		EFA292F2194F775E0054C049 /* lux_unit_tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lux_unit_tests.h; sourceTree = "<group>"; };
+		EFA292F3194F775E0054C049 /* platform_defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = platform_defines.h; sourceTree = "<group>"; };
+		EFA292F4194F775E0054C049 /* unit_test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unit_test.h; sourceTree = "<group>"; };
+		EFA292F5194F775E0054C049 /* unit_test_app.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = unit_test_app.cpp; sourceTree = "<group>"; };
+		EFA292F6194F775E0054C049 /* unit_test_app.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unit_test_app.h; sourceTree = "<group>"; };
+		EFA292F7194F775E0054C049 /* unit_test_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = unit_test_manager.cpp; sourceTree = "<group>"; };
+		EFA292F8194F775E0054C049 /* unit_test_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unit_test_manager.h; sourceTree = "<group>"; };
 		EFDCA771194F48E600101559 /* array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = array.h; path = ../../../src/core/array.h; sourceTree = "<group>"; };
 		EFDCA772194F48E600101559 /* blob.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = blob.cpp; path = ../../../src/core/blob.cpp; sourceTree = "<group>"; };
 		EFDCA773194F48E600101559 /* blob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = blob.h; path = ../../../src/core/blob.h; sourceTree = "<group>"; };
@@ -343,12 +343,13 @@
 		EF102D88194243E000F22450 /* unit_tests */ = {
 			isa = PBXGroup;
 			children = (
-				EF102EAE1947540300F22450 /* suite */,
-				EF102EB61947540300F22450 /* engine */,
-				EF102EB81947540300F22450 /* core */,
-				EF102D911942440C00F22450 /* main.cpp */,
+				EFA292E8194F775E0054C049 /* core */,
+				EFA292EF194F775E0054C049 /* engine */,
+				EFA292F1194F775E0054C049 /* suite */,
+				EFA292E6194F77370054C049 /* main.cpp */,
 			);
-			path = unit_tests;
+			name = unit_tests;
+			path = ../../../src/unit_tests;
 			sourceTree = "<group>";
 		};
 		EF102DAD194244BD00F22450 /* core */ = {
@@ -421,42 +422,39 @@
 			name = core;
 			sourceTree = "<group>";
 		};
-		EF102EAE1947540300F22450 /* suite */ = {
+		EFA292E8194F775E0054C049 /* core */ = {
 			isa = PBXGroup;
 			children = (
-				EF102EAF1947540300F22450 /* lux_unit_tests.h */,
-				EF102EB01947540300F22450 /* platform_defines.h */,
-				EF102EB11947540300F22450 /* unit_test.h */,
-				EF102EB21947540300F22450 /* unit_test_app.cpp */,
-				EF102EB31947540300F22450 /* unit_test_app.h */,
-				EF102EB41947540300F22450 /* unit_test_manager.cpp */,
-				EF102EB51947540300F22450 /* unit_test_manager.h */,
+				EFA292E9194F775E0054C049 /* ut_file_system.cpp */,
+				EFA292EA194F775E0054C049 /* ut_hash_map.cpp */,
+				EFA292EB194F775E0054C049 /* ut_mtjd_framework.cpp */,
+				EFA292EC194F775E0054C049 /* ut_path.cpp */,
+				EFA292ED194F775E0054C049 /* ut_quat.cpp */,
+				EFA292EE194F775E0054C049 /* ut_transaction_queue.cpp */,
 			);
-			name = suite;
-			path = ../../../../src/unit_tests/suite;
+			path = core;
 			sourceTree = "<group>";
 		};
-		EF102EB61947540300F22450 /* engine */ = {
+		EFA292EF194F775E0054C049 /* engine */ = {
 			isa = PBXGroup;
 			children = (
-				EF102EB71947540300F22450 /* ut_resource_managers.cpp */,
+				EFA292F0194F775E0054C049 /* ut_resource_managers.cpp */,
 			);
-			name = engine;
-			path = ../../../../src/unit_tests/engine;
+			path = engine;
 			sourceTree = "<group>";
 		};
-		EF102EB81947540300F22450 /* core */ = {
+		EFA292F1194F775E0054C049 /* suite */ = {
 			isa = PBXGroup;
 			children = (
-				EF102EB91947540300F22450 /* ut_file_system.cpp */,
-				EF102EBA1947540300F22450 /* ut_hash_map.cpp */,
-				EF102EBB1947540300F22450 /* ut_mtjd_framework.cpp */,
-				EF102EBC1947540300F22450 /* ut_path.cpp */,
-				EF102EBD1947540300F22450 /* ut_quat.cpp */,
-				EF102EBE1947540300F22450 /* ut_transaction_queue.cpp */,
+				EFA292F2194F775E0054C049 /* lux_unit_tests.h */,
+				EFA292F3194F775E0054C049 /* platform_defines.h */,
+				EFA292F4194F775E0054C049 /* unit_test.h */,
+				EFA292F5194F775E0054C049 /* unit_test_app.cpp */,
+				EFA292F6194F775E0054C049 /* unit_test_app.h */,
+				EFA292F7194F775E0054C049 /* unit_test_manager.cpp */,
+				EFA292F8194F775E0054C049 /* unit_test_manager.h */,
 			);
-			name = core;
-			path = ../../../../src/unit_tests/core;
+			path = suite;
 			sourceTree = "<group>";
 		};
 		EFDCA781194F48E600101559 /* fs */ = {
@@ -775,15 +773,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF102F461947540300F22450 /* ut_mtjd_framework.cpp in Sources */,
-				EF102F471947540300F22450 /* ut_path.cpp in Sources */,
-				EF102D941942440C00F22450 /* main.cpp in Sources */,
-				EF102F421947540300F22450 /* unit_test_manager.cpp in Sources */,
-				EF102F451947540300F22450 /* ut_hash_map.cpp in Sources */,
-				EF102F411947540300F22450 /* unit_test_app.cpp in Sources */,
-				EF102F441947540300F22450 /* ut_file_system.cpp in Sources */,
-				EF102F481947540300F22450 /* ut_quat.cpp in Sources */,
-				EF102F491947540300F22450 /* ut_transaction_queue.cpp in Sources */,
+				EFA292FA194F775E0054C049 /* ut_hash_map.cpp in Sources */,
+				EFA292E7194F77370054C049 /* main.cpp in Sources */,
+				EFA292FC194F775E0054C049 /* ut_path.cpp in Sources */,
+				EFA29301194F775E0054C049 /* unit_test_manager.cpp in Sources */,
+				EFA292FB194F775E0054C049 /* ut_mtjd_framework.cpp in Sources */,
+				EFA292FE194F775E0054C049 /* ut_transaction_queue.cpp in Sources */,
+				EFA292F9194F775E0054C049 /* ut_file_system.cpp in Sources */,
+				EFA292FD194F775E0054C049 /* ut_quat.cpp in Sources */,
+				EFA29300194F775E0054C049 /* unit_test_app.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
