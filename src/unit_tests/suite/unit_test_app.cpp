@@ -1,6 +1,8 @@
 #include "unit_tests/suite/lux_unit_tests.h"
 #include "core/log.h"
 
+#include "core/memory_tracker.h"
+
 #include <stdio.h>
 
 #ifdef WINDOWS_PLATFORM
@@ -36,6 +38,8 @@ namespace Lux
 			g_log_info.getCallback().bind<outputToConsole>();
 			g_log_warning.getCallback().bind<outputToConsole>();
 			g_log_error.getCallback().bind<outputToConsole>();
+			
+			MemoryTracker::getInstance().getDebuggerLogCb().bind<outputToConsole>();
 		}
 
 		void App::run(int argc, const char *argv[])

@@ -75,9 +75,8 @@ namespace Lux
 		
 		bool Task::destroy()
 		{
-			TODO("Check that join!");
-			void** dat = 0;
-			int ret = pthread_join(m_implementation->m_id, dat);
+			void* exit_value = NULL;
+			int ret = pthread_join(m_implementation->m_id, &exit_value);
 			LUX_DELETE(m_implementation);
 			m_implementation = NULL;
 			return ret;

@@ -224,8 +224,7 @@ void JsonSerializer::deserialize(const char* label, float& value)
 {
 	deserializeLabel(label);
 	logErrorIfNot(!m_is_string_token);
-	int i = sscanf_s(m_token, "%f", &value);
-	logErrorIfNot(i == 1);
+	value = static_cast<float>(atof(m_token));
 	deserializeToken();
 }
 
@@ -234,8 +233,7 @@ void JsonSerializer::deserialize(const char* label, uint32_t& value)
 {
 	deserializeLabel(label);
 	logErrorIfNot(!m_is_string_token);
-	int i = sscanf_s(m_token, "%" PRIu32, &value);
-	logErrorIfNot(i == 1);
+	value = static_cast<uint32_t>(atoi(m_token));
 	deserializeToken();
 }
 
@@ -250,8 +248,7 @@ void JsonSerializer::deserialize(const char* label, int& value)
 {
 	deserializeLabel(label);
 	logErrorIfNot(!m_is_string_token);
-	int i = sscanf_s(m_token, "%d", &value);
-	logErrorIfNot(i == 1);
+	value = atoi(m_token);
 	deserializeToken();
 }
 
@@ -338,8 +335,7 @@ void JsonSerializer::deserializeArrayItem(uint32_t& value)
 {
 	deserializeArrayComma();
 	logErrorIfNot(!m_is_string_token);
-	int i = sscanf_s(m_token, "%" PRIu32, &value);
-	logErrorIfNot(i == 1);
+	value = static_cast<uint32_t>(atoi(m_token));
 	deserializeToken();
 }
 
@@ -348,8 +344,7 @@ void JsonSerializer::deserializeArrayItem(int32_t& value)
 {
 	deserializeArrayComma();
 	logErrorIfNot(!m_is_string_token);
-	int i = sscanf_s(m_token, "%" PRIi32, &value);
-	logErrorIfNot(i == 1);
+	value = static_cast<int32_t>(atoi(m_token));
 	deserializeToken();
 }
 
@@ -358,8 +353,7 @@ void JsonSerializer::deserializeArrayItem(int64_t& value)
 {
 	deserializeArrayComma();
 	logErrorIfNot(!m_is_string_token);
-	int i = sscanf_s(m_token, "%" PRIi64, &value);
-	logErrorIfNot(i == 1);
+	value = static_cast<int64_t>(atoi(m_token));
 	deserializeToken();
 }
 
@@ -368,8 +362,7 @@ void JsonSerializer::deserializeArrayItem(float& value)
 {
 	deserializeArrayComma();
 	logErrorIfNot(!m_is_string_token);
-	int i = sscanf_s(m_token, "%f", &value);
-	logErrorIfNot(i == 1);
+	value = static_cast<float>(atof(m_token));
 	deserializeToken();
 }
 

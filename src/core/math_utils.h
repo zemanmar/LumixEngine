@@ -5,12 +5,14 @@
 #include "core/vec3.h"
 
 #ifdef max
+#define LUMIX_OLD_MAX max
 #undef max
-#endif
+#endif //~max
 
 #ifdef min
+#define LUMIX_OLD_MIN min
 #undef min
-#endif
+#endif //~min
 
 
 namespace Lux
@@ -39,6 +41,12 @@ namespace Lux
 		{
 			return a < b ? b : a;
 		}
+		
+		template <typename T>
+		inline T minValue(T a, T b)
+		{
+			return a < b ? a : b;
+		}
 
 		template <typename T>
 		inline T abs(T a)
@@ -65,3 +73,13 @@ namespace Lux
 
 	}
 }
+
+#ifdef LUMIX_OLD_MAX
+#define max LUMIX_OLD_MAX
+#undef LUMIX_OLD_MAX
+#endif //~LUMIX_OLD_MAX
+
+#ifdef LUMIX_OLD_MIN
+#define max LUMIX_OLD_MIN
+#undef LUMIX_OLD_MIN
+#endif //~LUMIX_OLD_MIN

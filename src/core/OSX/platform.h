@@ -43,9 +43,3 @@
 #else
 #define LUX_GUI_API
 #endif
-
-TODO("sscanf_s")
-inline int sscanf_s(const char * __restrict s1, const char * __restrict s2, ...)
-{
-	return 0;
-}
