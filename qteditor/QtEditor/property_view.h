@@ -2,6 +2,7 @@
 
 
 #include <QDockWidget>
+#include "core/lux.h"
 #include "core/array.h"
 #include "core/string.h"
 

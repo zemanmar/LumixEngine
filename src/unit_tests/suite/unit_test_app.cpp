@@ -39,7 +39,9 @@ namespace Lux
 			g_log_warning.getCallback().bind<outputToConsole>();
 			g_log_error.getCallback().bind<outputToConsole>();
 			
+#ifdef MEM_TRACK
 			MemoryTracker::getInstance().getDebuggerLogCb().bind<outputToConsole>();
+#endif //~MEM_TRACK
 		}
 
 		void App::run(int argc, const char *argv[])

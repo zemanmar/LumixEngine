@@ -1,6 +1,7 @@
 #pragma once
 
 #include <QDockWidget>
+#include "core/lux.h"
 #include "core/string.h"
 
 namespace Ui 

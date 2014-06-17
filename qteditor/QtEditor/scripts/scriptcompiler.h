@@ -2,6 +2,7 @@
 
 
 #include <QObject>
+#include "core/lux.h"
 #include "core/delegate_list.h"
 #include "core/map.h"
 #include "core/array.h"

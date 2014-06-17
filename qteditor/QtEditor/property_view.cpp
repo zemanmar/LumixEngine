@@ -7,14 +7,14 @@
 #include "editor/editor_client.h"
 #include "editor/server_message_types.h"
 
-#include "propertywidgets/animable_widget.h"
-#include "propertywidgets/camerawidget.h"
-#include "propertywidgets/lightwidget.h"
-#include "propertywidgets/physics_box_widget.h"
-#include "propertywidgets/physics_controller_widget.h"
-#include "propertywidgets/physics_mesh_widget.h"
-#include "propertywidgets/renderable_widget.h"
-#include "propertywidgets/script_widget.h"
+//#include "animable_widget.h"
+//#include "camerawidget.h"
+//#include "lightwidget.h"
+//#include "physics_box_widget.h"
+//#include "physics_controller_widget.h"
+//#include "physics_mesh_widget.h"
+//#include "renderable_widget.h"
+//#include "script_widget.h"
 
 #include "ui_property_view.h"
 #include <qpushbutton.h>
@@ -118,7 +118,7 @@ void PropertyView::on_browseFilesClicked()
 	m_client->setComponentProperty(m_properties[i]->m_component_name.c_str(), m_properties[i]->m_name.c_str(), edit->text().toLocal8Bit().data(), edit->text().size());
 }
 
-void PropertyView::onPropertyValue(Property* property, void* data, int32_t data_size)
+void PropertyView::onPropertyValue(Property* property, void* data, int32_t)
 {
 	switch(property->m_type)
 	{
