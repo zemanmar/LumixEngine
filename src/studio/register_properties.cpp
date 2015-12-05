@@ -5,6 +5,7 @@
 #include "editor/property_descriptor.h"
 #include "editor/world_editor.h"
 #include "lua_script/lua_script_system.h"
+#include "navigation/navigation_scene.h"
 #include "physics/physics_scene.h"
 #include "renderer/render_scene.h"
 #include <cfloat>
@@ -36,6 +37,21 @@ void registerAudioProperties(Lumix::IAllocator& allocator)
 		LUMIX_NEW(allocator, BoolPropertyDescriptor<AudioScene>)("3D",
 		&AudioScene::isAmbientSound3D,
 		&AudioScene::setAmbientSound3D,
+		allocator));
+}
+
+
+void registerNavigationProperties(Lumix::IAllocator& allocator)
+{
+	PropertyRegister::registerComponentType("navigation_agent", "Navigation Agent");
+
+	Lumix::PropertyRegister::add("navigation_agent",
+		LUMIX_NEW(allocator, DecimalPropertyDescriptor<NavigationScene>)("Radius",
+		&NavigationScene::getNavigationAgentRadius,
+		&NavigationScene::setNavigationAgentRadius,
+		0.0f,
+		FLT_MAX,
+		0.1f,
 		allocator));
 }
 
@@ -376,4 +392,5 @@ void registerProperties(Lumix::WorldEditor& editor)
 	registerLuaScriptProperties(editor.getAllocator());
 	registerPhysicsProperties(editor.getAllocator());
 	registerAudioProperties(editor.getAllocator());
+	registerNavigationProperties(editor.getAllocator());
 }

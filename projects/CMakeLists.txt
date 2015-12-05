@@ -175,6 +175,37 @@ set_target_properties (animation PROPERTIES COMPILE_DEFINITIONS "BUILDING_ANIMAT
 target_link_libraries(animation engine)
 target_link_libraries(animation renderer)
 
+###################### NAVIGATION ######################
+
+set(NAVIGATION_ROOT_PATH ${SRC_PATH}navigation/)
+
+file(GLOB NAVIGATION_ROOT_FILES ${NAVIGATION_ROOT_PATH}*.cpp ${NAVIGATION_ROOT_PATH}*.h)
+file(GLOB NAVIGATION_RECAST_FILES ${NAVIGATION_ROOT_PATH}recast/source/*.cpp ${NAVIGATION_ROOT_PATH}recast/include/*.h)
+file(GLOB NAVIGATION_DETOUR_FILES ${NAVIGATION_ROOT_PATH}detour/source/*.cpp ${NAVIGATION_ROOT_PATH}detour/include/*.h)
+file(GLOB NAVIGATION_DETOUR_CROWD_FILES ${NAVIGATION_ROOT_PATH}detourcrowd/source/*.cpp ${NAVIGATION_ROOT_PATH}detourcrowd/include/*.h)
+
+source_group("" FILES ${NAVIGATION_ROOT_FILES})
+source_group(recast FILES ${NAVIGATION_RECAST_FILES})
+source_group(detour FILES ${NAVIGATION_DETOUR_FILES})
+source_group(detourcrowd FILES ${NAVIGATION_DETOUR_CROWD_FILES})
+
+include_directories(${SRC_PATH})
+include_directories(${NAVIGATION_ROOT_PATH}recast/include)
+include_directories(${NAVIGATION_ROOT_PATH}detour/include)
+include_directories(${NAVIGATION_ROOT_PATH}detourcrowd/include)
+
+add_library(navigation SHARED
+	${NAVIGATION_ROOT_FILES}
+	${NAVIGATION_RECAST_FILES}
+	${NAVIGATION_DETOUR_FILES}
+	${NAVIGATION_DETOUR_CROWD_FILES}
+)
+
+set_target_properties (navigation PROPERTIES COMPILE_DEFINITIONS "BUILDING_NAVIGATION")
+
+target_link_libraries(navigation engine)
+target_link_libraries(navigation physics)
+
 ###################### EDITOR ######################
 
 file(GLOB EDITOR_ROOT_FILES ${SRC_PATH}editor/*.cpp ${SRC_PATH}editor/*.h)
